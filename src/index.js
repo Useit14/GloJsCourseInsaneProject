@@ -3,12 +3,25 @@ import menu from "./modules/menu";
 import modal from "./modules/modal";
 import { validation } from "./modules/validationForm";
 import sendForm from "./modules/sendForm";
+import accordion from "./modules/accordion";
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
-modal("popup-repair-types", "link-list a");
-modal("popup-privacy", "link-privacy");
-modal("popup-consultation", "button_wide");
+modal("popup-repair-types", "link-list a", { isCarousel: false });
+modal("popup-privacy", "link-privacy", { isCarousel: false });
+modal("popup-consultation", "button_wide", { isCarousel: false });
+modal("popup-portfolio", "portfolio-slider__slide", {
+  isCarousel: true,
+  isInitActiveSlide: true,
+  classSlides: "popup-portfolio-slider__slide",
+  classSlider: "popup-portfolio-slider-wrap",
+  classActiveSlides: "active",
+  classControlLeft: "popup-arrow_left",
+  classControlRight: "popup-arrow_right",
+  portfolioBtn: "popup-arrow",
+  classCounter: "slider-counter-content__current",
+  classCounterTotal: "slider-counter-content__total",
+});
 
 validation("feedback1");
 validation("feedback2");
@@ -41,3 +54,5 @@ sendForm({
   formId: "feedback6",
   someElem: [{ type: "checkbox", id: "checkbox6" }],
 });
+
+accordion("accordion");
