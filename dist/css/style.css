@@ -4829,6 +4829,11 @@ div.wave-block:nth-child(17):after {
     transition: 1s;
 }
 
+.popup .popup-dialog-menu-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
 @media (max-width: 1024px) {
     .popup-dialog-menu {
         width: 549px;
@@ -4891,6 +4896,17 @@ div.wave-block:nth-child(17):after {
     .popup-dialog-portfolio {
         height: 100%;
         max-height: 980px;
+    }
+
+
+    .popup-dialog-menu {
+        -webkit-transform: translate3d(0, -846px, 0);
+        transform: translate3d(0, -846px, 0);
+    }
+
+    .popup .popup-dialog-menu-active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
