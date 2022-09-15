@@ -1,15 +1,19 @@
 import { animate } from "./helpers";
 
-const modal = () => {
-  const popupContent = document.querySelector(".popup-repair-types");
-  const buttons = document.querySelectorAll(".link-list a");
-  const closeBtn = popupContent.querySelector(".mobile-hide");
+const modal = (popupClass, buttonClass) => {
+  const popupContent = document.querySelector(`.${popupClass}`);
+  const buttons = document.querySelectorAll(`.${buttonClass}`);
+  const closeBtn = popupContent.querySelector(".close ");
 
-  buttons.forEach((element) => {
-    element.addEventListener("click", () => {
-      popupContent.style.visibility = "visible";
+  if (buttonClass) {
+    buttons.forEach((element) => {
+      element.addEventListener("click", () => {
+        popupContent.style.visibility = "visible";
+      });
     });
-  });
+  } else {
+    popupContent.style.visibility = "visible";
+  }
 
   closeBtn.addEventListener("click", () => {
     popupContent.style.visibility = "hidden";
