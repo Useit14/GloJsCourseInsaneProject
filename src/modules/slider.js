@@ -7,7 +7,8 @@ const slider = (
   arrowRight,
   indexActiveSlide,
   classCounter,
-  classCounterTotal
+  classCounterTotal,
+  isWithChangeNode
 ) => {
   try {
     const classes = [
@@ -28,32 +29,69 @@ const slider = (
   }
 
   const sliderBlock = document.querySelector(`.${classSlider}`);
-  const slides = document.querySelectorAll(`.${classSlides}`);
+  let slides = document.querySelectorAll(`.${classSlides}`);
   const counter = sliderBlock.querySelector(`.${classCounter}`);
   const counterTotal = sliderBlock.querySelector(`.${classCounterTotal}`);
+  const controlLeft = sliderBlock.querySelector(`.${arrowLeft}`);
+  const controlRight = sliderBlock.querySelector(`.${arrowRight}`);
 
   const timeInterval = 2000;
 
   let currentSlide = 0;
   let interval;
-  counterTotal.textContent = slides.length;
+  let direction = "right";
 
   const prevSlide = (elems, index, strClass) => {
-    elems[index].classList.remove(strClass);
-    counter.textContent = index;
+    if (isWithChangeNode) {
+      elems[elems.length - 1].after(elems[0]);
+      slides = document.querySelectorAll(`.${classSlides}`);
+    } else {
+      elems[index].classList.remove(strClass);
+      if (classCounter) {
+        counter.textContent = index;
+      }
+    }
   };
 
   const nextSlide = (elems, index, strClass) => {
-    elems[index].classList.add(strClass);
-    counter.textContent = index;
+    if (isWithChangeNode) {
+      elems[0].before(elems[elems.length - 1]);
+      slides = document.querySelectorAll(`.${classSlides}`);
+    } else {
+      elems[index].classList.add(strClass);
+      if (classCounter) {
+        counter.textContent = index;
+      }
+    }
   };
 
   const autoSlide = () => {
-    prevSlide(slides, currentSlide, classActiveSlides);
+    if ((isWithChangeNode && direction === "left") || !isWithChangeNode) {
+      prevSlide(slides, currentSlide, classActiveSlides);
+    }
 
-    currentSlide++;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    nextSlide(slides, currentSlide, classActiveSlides);
+    if (!isWithChangeNode && currentSlide >= slides.length) {
+      currentSlide = 0;
+    } else if (currentSlide > slides.length - 1) {
+      direction = "left";
+      controlLeft.classList.toggle("d-none");
+      controlRight.classList.toggle("d-none");
+    } else if (currentSlide < 0) {
+      direction = "right";
+      controlLeft.classList.toggle("d-none");
+      controlRight.classList.toggle("d-none");
+    }
+
+    if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
+      currentSlide++;
+    }
+    if ((isWithChangeNode && direction === "left") || !isWithChangeNode) {
+      currentSlide--;
+    }
+
+    if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
+      nextSlide(slides, currentSlide, classActiveSlides);
+    }
   };
 
   const startSlide = (timer = 1500) => {
@@ -79,18 +117,29 @@ const slider = (
     if (!e.target.closest(`.${portfolioBtn}`)) {
       return;
     }
-    prevSlide(slides, currentSlide, classActiveSlides);
+    !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
 
     if (e.target.closest(`.${arrowRight}`)) {
       currentSlide++;
+      isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
     } else if (e.target.closest(`.${arrowLeft}`)) {
       currentSlide--;
+      isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
     }
 
-    if (currentSlide >= slides.length) currentSlide = 0;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
+    if (!isWithChangeNode && currentSlide >= slides.length) {
+      currentSlide = 0;
+    } else if (currentSlide === slides.length - 1) {
+      direction = "left";
+      controlLeft.classList.toggle("d-none");
+      controlRight.classList.toggle("d-none");
+    } else if (currentSlide === 0) {
+      direction = "right";
+      controlLeft.classList.toggle("d-none");
+      controlRight.classList.toggle("d-none");
+    }
 
-    nextSlide(slides, currentSlide, classActiveSlides);
+    !isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
   });
 
   sliderBlock.addEventListener(
@@ -112,6 +161,10 @@ const slider = (
     },
     true
   );
+
+  if (classCounterTotal) {
+    counterTotal.textContent = slides.length;
+  }
   if (typeof indexActiveSlide === "number") {
     initActiveSlide(indexActiveSlide);
   }

@@ -8244,9 +8244,6 @@ div.active {
     }
 }
 
-#portfolio-arrow_left {
-    display: none;
-}
 
 @media (max-width: 900px) {
     #portfolio-arrow_left {

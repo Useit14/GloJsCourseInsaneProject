@@ -4,6 +4,7 @@ import modal from "./modules/modal";
 import { validation } from "./modules/validationForm";
 import sendForm from "./modules/sendForm";
 import accordion from "./modules/accordion";
+import slider from "./modules/slider";
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
@@ -56,3 +57,16 @@ sendForm({
 });
 
 accordion("accordion");
+
+slider(
+  "portfolio-slider-wrap",
+  "portfolio-slider__slide",
+  "active",
+  "slider-arrow ",
+  "slider-arrow_left-portfolio",
+  "slider-arrow_right-portfolio",
+  null,
+  null,
+  null,
+  true
+);
