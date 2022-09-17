@@ -614,11 +614,25 @@ template,
     }
 }
 
+@media (max-width:1025px) {
+    div.popup-arrow {
+        top: 34%
+    }
+
+    div.popup-arrow_right {
+        right: 3%;
+    }
+
+}
+
+
 @media (max-width: 575px) {
     .services-item {
         display: none;
     }
+
 }
+
 
 .services-item__img {
     position: relative;
@@ -4888,7 +4902,7 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 1024px) {
     .popup-dialog-portfolio {
-        height: 857px;
+        height: 1000px;
     }
 }
 
@@ -6041,8 +6055,12 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 1024px) and (min-width: 576px) {
     .popup-portfolio-text {
-        width: 100%;
         height: 293px;
+    }
+
+    div.slider-counter {
+        top: 50%;
+        left: 50%;
     }
 }
 
@@ -6115,8 +6133,12 @@ div.wave-block:nth-child(17):after {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        width: 20%;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    div.popup-portfolio-text div {
+        padding-left: 10px;
     }
 }
 
@@ -6168,8 +6190,12 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 1024px) {
     .popup-portfolio-text-price {
-        min-height: 200px;
-        height: 200px;
+        min-height: 10px;
+        flex-direction: row;
+    }
+
+    div.popup-portfolio-text {
+        width: 100%;
     }
 }
 
@@ -6178,6 +6204,11 @@ div.wave-block:nth-child(17):after {
         height: 215px;
         margin-top: -20px;
         text-align: center;
+        flex-direction: column
+    }
+
+    div.popup-portfolio-text div {
+        padding-left: 0px;
     }
 }
 
@@ -7406,7 +7437,7 @@ div.active {
     position: absolute;
     width: 28px;
     height: 40px;
-    top: 47%;
+    top: 45%;
 }
 
 .popup-arrow svg path {
@@ -7422,17 +7453,23 @@ div.active {
 }
 
 .popup-arrow_left {
-    left: 15px;
+    left: 1%;
 }
 
 .popup-arrow_right {
-    right: 34%;
+    right: 36%;
 }
 
 @media (max-width: 575px) {
-    .popup-arrow {
+    div.popup-arrow {
         width: 16px;
         margin-top: -12px;
+        top: 20%
+    }
+
+
+    div.popup-arrow_right {
+        right: 1%;
     }
 
     .popup-arrow svg {
