@@ -99,23 +99,24 @@ const slider = (
       if (!e.target.closest(`.${portfolioBtn}`)) {
         return;
       }
+      debugger;
       !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
 
-      if (e.target.closest(`.${arrowRight}`)) {
+      if (e.target.closest(`#${arrowRight}`)) {
         currentSlide++;
         isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
-      } else if (e.target.closest(`.${arrowLeft}`)) {
+      } else if (e.target.closest(`#${arrowLeft}`)) {
         currentSlide--;
         isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
       }
 
       if (!isWithChangeNode && currentSlide >= slides.length) {
         currentSlide = 0;
-      } else if (currentSlide === slides.length - 1) {
+      } else if (currentSlide >= slides.length) {
         direction = "left";
         controlLeft.classList.toggle("none");
         controlRight.classList.toggle("none");
-      } else if (currentSlide === 0) {
+      } else if (currentSlide <= 0) {
         direction = "right";
         controlLeft.classList.toggle("none");
         controlRight.classList.toggle("none");

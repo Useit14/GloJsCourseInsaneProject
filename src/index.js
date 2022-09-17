@@ -71,3 +71,17 @@ slider(
   true,
   false
 );
+
+slider(
+  "reviews-slider-wrap",
+  "reviews-slider__slide",
+  "acitve-flex",
+  "slider-arrow ",
+  "reviews-arrow_left",
+  "reviews-arrow_right",
+  null,
+  null,
+  null,
+  false,
+  true
+);
