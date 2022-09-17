@@ -59,12 +59,12 @@ sendForm({
 accordion("accordion");
 
 slider(
-  "portfolio-slider-wrap",
+  "portfolio-slider",
   "portfolio-slider__slide",
   "active",
   "slider-arrow ",
-  "slider-arrow_left-portfolio",
-  "slider-arrow_right-portfolio",
+  "portfolio-arrow_left",
+  "portfolio-arrow_right",
   null,
   null,
   null,

@@ -15,8 +15,8 @@ const slider = (
   let slides = document.querySelectorAll(`.${classSlides}`);
   const counter = sliderBlock.querySelector(`.${classCounter}`);
   const counterTotal = sliderBlock.querySelector(`.${classCounterTotal}`);
-  const controlLeft = sliderBlock.querySelector(`.${arrowLeft}`);
-  const controlRight = sliderBlock.querySelector(`.${arrowRight}`);
+  const controlLeft = document.querySelector(`#${arrowLeft}`);
+  const controlRight = document.querySelector(`#${arrowRight}`);
 
   const timeInterval = 2000;
 
@@ -60,13 +60,15 @@ const slider = (
     if (!isWithChangeNode && currentSlide >= slides.length) {
       currentSlide = 0;
     } else if (currentSlide >= slides.length) {
+      debugger;
+
       direction = "left";
-      controlLeft.classList.toggle("d-none");
-      controlRight.classList.toggle("d-none");
+      controlLeft.classList.toggle("none");
+      controlRight.classList.toggle("none");
     } else if (currentSlide < 0) {
       direction = "right";
-      controlLeft.classList.toggle("d-none");
-      controlRight.classList.toggle("d-none");
+      controlLeft.classList.toggle("none");
+      controlRight.classList.toggle("none");
     }
 
     if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
@@ -84,7 +86,7 @@ const slider = (
 
   const initActiveSlide = (index) => {
     slides.forEach((slide, indexSlide) => {
-      slide.classList.add("d-none");
+      slide.classList.add("none");
       if (index === indexSlide) {
         slide.classList.add("active");
         currentSlide = index;
@@ -112,12 +114,12 @@ const slider = (
         currentSlide = 0;
       } else if (currentSlide === slides.length - 1) {
         direction = "left";
-        controlLeft.classList.toggle("d-none");
-        controlRight.classList.toggle("d-none");
+        controlLeft.classList.toggle("none");
+        controlRight.classList.toggle("none");
       } else if (currentSlide === 0) {
         direction = "right";
-        controlLeft.classList.toggle("d-none");
-        controlRight.classList.toggle("d-none");
+        controlLeft.classList.toggle("none");
+        controlRight.classList.toggle("none");
       }
 
       !isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
