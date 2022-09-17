@@ -8266,11 +8266,13 @@ div.active {
     #portfolio-arrow_left {
         left: -50px;
     }
-}
 
-@media (max-width: 900px) {
     #portfolio-arrow_right {
         right: -50px;
+    }
+
+    div.portfolio-slider {
+        width: 82%;
     }
 }
 

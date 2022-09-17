@@ -18,6 +18,7 @@ const modal = (
   const popupContent = document.querySelector(`.${popupClass}`);
   const buttons = document.querySelectorAll(`.${buttonClass}`);
   const closeBtn = popupContent.querySelector(".close ");
+  let idInterval;
 
   const getIndexActiveSlide = (event) => {
     const image = event.target.querySelector("img");
@@ -30,7 +31,7 @@ const modal = (
       element.addEventListener("click", (event) => {
         if (isCarousel) {
           popupContent.style.visibility = "visible";
-          slider(
+          idInterval = slider(
             classSlider,
             classSlides,
             classActiveSlides,
@@ -52,6 +53,7 @@ const modal = (
   }
 
   closeBtn.addEventListener("click", () => {
+    clearInterval(idInterval);
     popupContent.style.visibility = "hidden";
   });
 };

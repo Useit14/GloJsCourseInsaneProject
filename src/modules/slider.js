@@ -17,7 +17,8 @@ const slider = (
   const counterTotal = sliderBlock.querySelector(`.${classCounterTotal}`);
   const controlLeft = document.querySelector(`#${arrowLeft}`);
   const controlRight = document.querySelector(`#${arrowRight}`);
-
+  const popup = document.querySelector(`.popup-portfolio`);
+  const closeBtn = popup.querySelector(".close");
   const timeInterval = 2000;
 
   let currentSlide = 0;
@@ -60,8 +61,6 @@ const slider = (
     if (!isWithChangeNode && currentSlide >= slides.length) {
       currentSlide = 0;
     } else if (currentSlide >= slides.length) {
-      debugger;
-
       direction = "left";
       controlLeft.classList.toggle("none");
       controlRight.classList.toggle("none");
@@ -152,7 +151,13 @@ const slider = (
   if (typeof indexActiveSlide === "number") {
     initActiveSlide(indexActiveSlide);
   }
+
+  if (indexActiveSlide) {
+    closeBtn.addEventListener("click", () => interval);
+  }
+
   startSlide(timeInterval);
+  return interval;
 };
 
 export default slider;
