@@ -6633,6 +6633,11 @@ div.wave-block:nth-child(17):after {
     background: linear-gradient(90deg, #F48922 0%, #FFB015 100%);
 }
 
+.popup-error-bg {
+    background: -webkit-gradient(linear, left top, right top, from(#F48922), to(#FFB015));
+    background: linear-gradient(90deg, #f43322 0%, #ff1515 100%);
+}
+
 @media (max-width: 575px) {
     .popup-thank-bg {
         height: 381px;
@@ -7119,6 +7124,19 @@ div.wave-block:nth-child(17):after {
     left: -60px;
 }
 
+.statusBlock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid red;
+    color: red;
+    padding: 14px;
+    width: auto;
+    font-size: 13px;
+    margin-top: -5px;
+    text-align: center;
+}
+
 @media (max-width: 1130px) {
     .slider-arrow_left-portfolio {
         left: -30px;
@@ -7388,8 +7406,7 @@ div.active {
     position: absolute;
     width: 28px;
     height: 40px;
-    top: 50%;
-    margin-top: -20px;
+    top: 47%;
 }
 
 .popup-arrow svg path {
@@ -7409,7 +7426,7 @@ div.active {
 }
 
 .popup-arrow_right {
-    right: 15px;
+    right: 34%;
 }
 
 @media (max-width: 575px) {
@@ -7470,8 +7487,8 @@ div.active {
     position: absolute;
     width: 58px;
     height: 58px;
-    bottom: 16px;
-    left: 50%;
+    top: 87%;
+    left: 36%;
     margin-left: -29px;
     display: -webkit-box;
     display: -ms-flexbox;

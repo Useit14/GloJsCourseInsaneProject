@@ -15,7 +15,7 @@ modal("popup-portfolio", "portfolio-slider__slide", {
   isCarousel: true,
   isInitActiveSlide: true,
   classSlides: "popup-portfolio-slider__slide",
-  classSlider: "popup-portfolio-slider-wrap",
+  classSlider: "popup-dialog-portfolio",
   classActiveSlides: "active",
   classControlLeft: "popup-arrow_left",
   classControlRight: "popup-arrow_right",
@@ -68,5 +68,6 @@ slider(
   null,
   null,
   null,
-  true
+  true,
+  false
 );

@@ -8,26 +8,9 @@ const slider = (
   indexActiveSlide,
   classCounter,
   classCounterTotal,
-  isWithChangeNode
+  isWithChangeNode,
+  isControl
 ) => {
-  try {
-    const classes = [
-      classSlider,
-      classSlides,
-      classActiveSlides,
-      portfolioBtn,
-      arrowLeft,
-      arrowRight,
-    ];
-    classes.forEach((prop) => {
-      if (!document.querySelector(`.${prop}`)) {
-        throw new RangeError();
-      }
-    });
-  } catch (e) {
-    return;
-  }
-
   const sliderBlock = document.querySelector(`.${classSlider}`);
   let slides = document.querySelectorAll(`.${classSlides}`);
   const counter = sliderBlock.querySelector(`.${classCounter}`);
@@ -47,9 +30,6 @@ const slider = (
       slides = document.querySelectorAll(`.${classSlides}`);
     } else {
       elems[index].classList.remove(strClass);
-      if (classCounter) {
-        counter.textContent = index;
-      }
     }
   };
 
@@ -60,7 +40,7 @@ const slider = (
     } else {
       elems[index].classList.add(strClass);
       if (classCounter) {
-        counter.textContent = index;
+        counter.textContent = index + 1;
       }
     }
   };
@@ -70,9 +50,16 @@ const slider = (
       prevSlide(slides, currentSlide, classActiveSlides);
     }
 
+    if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
+      currentSlide++;
+    }
+    if (isWithChangeNode && direction === "left") {
+      currentSlide--;
+    }
+
     if (!isWithChangeNode && currentSlide >= slides.length) {
       currentSlide = 0;
-    } else if (currentSlide > slides.length - 1) {
+    } else if (currentSlide >= slides.length) {
       direction = "left";
       controlLeft.classList.toggle("d-none");
       controlRight.classList.toggle("d-none");
@@ -80,13 +67,6 @@ const slider = (
       direction = "right";
       controlLeft.classList.toggle("d-none");
       controlRight.classList.toggle("d-none");
-    }
-
-    if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
-      currentSlide++;
-    }
-    if ((isWithChangeNode && direction === "left") || !isWithChangeNode) {
-      currentSlide--;
     }
 
     if ((isWithChangeNode && direction === "right") || !isWithChangeNode) {
@@ -112,35 +92,37 @@ const slider = (
     });
   };
 
-  sliderBlock.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!e.target.closest(`.${portfolioBtn}`)) {
-      return;
-    }
-    !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
+  if (isControl) {
+    sliderBlock.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!e.target.closest(`.${portfolioBtn}`)) {
+        return;
+      }
+      !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
 
-    if (e.target.closest(`.${arrowRight}`)) {
-      currentSlide++;
-      isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
-    } else if (e.target.closest(`.${arrowLeft}`)) {
-      currentSlide--;
-      isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
-    }
+      if (e.target.closest(`.${arrowRight}`)) {
+        currentSlide++;
+        isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
+      } else if (e.target.closest(`.${arrowLeft}`)) {
+        currentSlide--;
+        isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
+      }
 
-    if (!isWithChangeNode && currentSlide >= slides.length) {
-      currentSlide = 0;
-    } else if (currentSlide === slides.length - 1) {
-      direction = "left";
-      controlLeft.classList.toggle("d-none");
-      controlRight.classList.toggle("d-none");
-    } else if (currentSlide === 0) {
-      direction = "right";
-      controlLeft.classList.toggle("d-none");
-      controlRight.classList.toggle("d-none");
-    }
+      if (!isWithChangeNode && currentSlide >= slides.length) {
+        currentSlide = 0;
+      } else if (currentSlide === slides.length - 1) {
+        direction = "left";
+        controlLeft.classList.toggle("d-none");
+        controlRight.classList.toggle("d-none");
+      } else if (currentSlide === 0) {
+        direction = "right";
+        controlLeft.classList.toggle("d-none");
+        controlRight.classList.toggle("d-none");
+      }
 
-    !isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
-  });
+      !isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
+    });
+  }
 
   sliderBlock.addEventListener(
     "mouseenter",

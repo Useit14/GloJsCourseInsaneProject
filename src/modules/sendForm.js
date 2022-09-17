@@ -6,23 +6,9 @@ import modal from "./modal";
 const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(`#${formId}`);
   const btnForm = form.querySelector(".button");
-  const statusBlock = document.createElement("div");
-  const img = document.createElement("img");
+  const statusBlock = document.querySelector(".popup-error__descr");
 
   const sendData = async (data) => {
-    statusBlock.textContent = "";
-    statusBlock.style.opacity = "1";
-    img.style.opacity = "1";
-
-    animate({
-      duration: 500,
-      timing(timeFraction) {
-        return 1 - Math.sin(Math.acos(timeFraction));
-      },
-      draw(progress) {
-        img.style.transform = `rotate(${parseInt(progress * 360)}deg)`;
-      },
-    });
     return await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify(data),
@@ -34,7 +20,6 @@ const sendForm = ({ formId, someElem = [] }) => {
 
   const submitForm = () => {
     const formElemtns = form.querySelectorAll("input");
-
     const formData = new FormData(form);
     const formBody = {};
 
@@ -59,14 +44,17 @@ const sendForm = ({ formId, someElem = [] }) => {
         .then((data) => {
           formElemtns.forEach((input) => {
             input.value = "";
-            modal("popup-thank");
+            modal("popup-thank", null, {});
           });
         })
         .catch((error) => {
-          console.log(message.join(". "));
+          statusBlock.textContent = message.join(". ");
+
+          modal("popup-error", null, {});
         });
     } else {
-      console.log(message.join(". "));
+      statusBlock.textContent = message.join(". ");
+      modal("popup-error", null, {});
     }
   };
 

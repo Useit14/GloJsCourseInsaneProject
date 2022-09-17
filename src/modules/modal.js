@@ -3,16 +3,16 @@ const modal = (
   popupClass,
   buttonClass,
   {
-    isCarousel,
-    isInitActiveSlide,
-    classSlides,
-    classSlider,
-    classActiveSlides,
-    portfolioBtn,
-    classControlLeft,
-    classControlRight,
-    classCounter,
-    classCounterTotal,
+    isCarousel = "",
+    isInitActiveSlide = "",
+    classSlides = "",
+    classSlider = "",
+    classActiveSlides = "",
+    portfolioBtn = "",
+    classControlLeft = "",
+    classControlRight = "",
+    classCounter = "",
+    classCounterTotal = "",
   }
 ) => {
   const popupContent = document.querySelector(`.${popupClass}`);
@@ -39,7 +39,8 @@ const modal = (
             classControlRight,
             isInitActiveSlide && getIndexActiveSlide(event),
             classCounter,
-            classCounterTotal
+            classCounterTotal,
+            false
           );
         } else {
           popupContent.style.visibility = "visible";
