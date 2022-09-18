@@ -8,6 +8,10 @@ import slider from "./modules/slider";
 import repairSlider from "./modules/repairSlider";
 import prompt from "./modules/prompt";
 import portfolio from "./modules/portfolio";
+import { UserService } from "./modules/userService";
+import getRepairTypes from "./modules/getRepairTypes";
+
+window.userService = new UserService();
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
@@ -98,3 +102,5 @@ if (screen.width <= 575) {
     true
   );
 }
+
+getRepairTypes();

@@ -30,7 +30,6 @@ const porfolio = () => {
   popupBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       modal("popup-portfolio", null, { isCarousel: false });
-      debugger;
       idInterval = slider(
         "popup-dialog-portfolio",
         "popup-portfolio-slider__slide",
@@ -45,7 +44,6 @@ const porfolio = () => {
         false,
         true
       );
-      debugger;
       slider(
         "popup-dialog-portfolio",
         "popup-portfolio-text",
