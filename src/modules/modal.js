@@ -13,17 +13,26 @@ const modal = (
     classControlRight = "",
     classCounter = "",
     classCounterTotal = "",
-  }
+  },
+  isPrompt,
+  promptTarget
 ) => {
   const popupContent = document.querySelector(`.${popupClass}`);
   const buttons = document.querySelectorAll(`.${buttonClass}`);
   const closeBtn = popupContent.querySelector(".close ");
   let idInterval;
-
   const getIndexActiveSlide = (event) => {
     const image = event.target.querySelector("img");
     const index = parseInt(image.alt[image.alt.search(/[0-9]/)]);
     return index - 1;
+  };
+
+  const isVisible = (element) => {
+    if (element.getBoundingClientRect().top < 0) {
+      popupContent.classList.add("formula-item-popup-bottom");
+    }
+    popupContent.style.opacity = 1;
+    popupContent.style.visibility = "visible";
   };
 
   if (buttonClass) {
@@ -48,14 +57,18 @@ const modal = (
         }
       });
     });
+  } else if (isPrompt) {
+    isVisible(popupContent);
   } else {
     popupContent.style.visibility = "visible";
   }
 
-  closeBtn.addEventListener("click", () => {
-    clearInterval(idInterval);
-    popupContent.style.visibility = "hidden";
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      clearInterval(idInterval);
+      popupContent.style.visibility = "hidden";
+    });
+  }
 };
 
 export default modal;

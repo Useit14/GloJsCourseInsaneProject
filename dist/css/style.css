@@ -1357,6 +1357,7 @@ template,
     bottom: 90px;
     visibility: hidden;
     width: 423px;
+    z-index: 1;
     padding: 20px 40px 0;
     font-style: normal;
     font-weight: 300;
@@ -1366,6 +1367,14 @@ template,
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
     opacity: 0.1;
+}
+
+div.formula-item-popup-bottom {
+    top: 90px;
+}
+
+div.formula-item-popup-bottom::before {
+    transform: rotate(180deg);
 }
 
 .formula-item-popup p {
@@ -1690,7 +1699,7 @@ template,
 }
 
 #repair-counter {
-    top: 60%;
+    top: 82%;
 }
 
 .repair-types-slider-wrap:before {
@@ -8827,7 +8836,7 @@ strong {
     font-size: 30px;
     line-height: 35px;
     color: #322823;
-    z-index: 0;
+    z-index: -1;
 }
 
 @media (max-width: 1024px) {

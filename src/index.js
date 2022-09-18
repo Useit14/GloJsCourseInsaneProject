@@ -6,6 +6,7 @@ import sendForm from "./modules/sendForm";
 import accordion from "./modules/accordion";
 import slider from "./modules/slider";
 import repairSlider from "./modules/repairSlider";
+import prompt from "./modules/prompt";
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
@@ -88,3 +89,4 @@ slider(
 );
 
 repairSlider();
+prompt();
