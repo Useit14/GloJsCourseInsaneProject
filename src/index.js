@@ -5,6 +5,7 @@ import { validation } from "./modules/validationForm";
 import sendForm from "./modules/sendForm";
 import accordion from "./modules/accordion";
 import slider from "./modules/slider";
+import repairSlider from "./modules/repairSlider";
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
@@ -85,3 +86,5 @@ slider(
   false,
   true
 );
+
+repairSlider();

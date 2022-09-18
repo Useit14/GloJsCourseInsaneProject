@@ -6,8 +6,8 @@ const slider = (
   arrowLeft,
   arrowRight,
   indexActiveSlide,
-  classCounter,
-  classCounterTotal,
+  classCounter = "slider-counter-content__current",
+  classCounterTotal = "slider-counter-content__total",
   isWithChangeNode,
   isControl
 ) => {
@@ -84,6 +84,7 @@ const slider = (
   };
 
   const initActiveSlide = (index) => {
+    debugger;
     slides.forEach((slide, indexSlide) => {
       slide.classList.add("none");
       if (index === indexSlide) {

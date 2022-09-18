@@ -1649,6 +1649,11 @@ template,
 
 .repair-types-slider-wrap {
     position: relative;
+    width: 50%;
+}
+
+#repair-counter {
+    left: 54%;
 }
 
 @media (max-width: 1024px) {
@@ -1665,8 +1670,10 @@ template,
 
 .repair-types-slider-wrap:before {
     position: absolute;
-    top: -120px;
-    right: -155px;
+    /* top: -120px;
+    right: -155px; */
+    top: -128px;
+    right: 353px;
     content: '';
     width: 817px;
     height: 817px;
@@ -7187,7 +7194,7 @@ div.wave-block:nth-child(17):after {
 }
 
 .slider-arrow_right {
-    right: -20px;
+    right: -65px;
 }
 
 .slider-arrow_right-portfolio {
