@@ -9,7 +9,8 @@ const slider = (
   classCounter = "slider-counter-content__current",
   classCounterTotal = "slider-counter-content__total",
   isWithChangeNode,
-  isControl
+  isControl,
+  isAuto = true
 ) => {
   const sliderBlock = document.querySelector(`.${classSlider}`);
   let slides = document.querySelectorAll(`.${classSlides}`);
@@ -76,7 +77,9 @@ const slider = (
   };
 
   const startSlide = (timer = 1500) => {
-    interval = setInterval(autoSlide, timer);
+    if (isAuto) {
+      interval = setInterval(autoSlide, timer);
+    }
   };
 
   const stopSlide = () => {
@@ -84,7 +87,6 @@ const slider = (
   };
 
   const initActiveSlide = (index) => {
-    debugger;
     slides.forEach((slide, indexSlide) => {
       slide.classList.add("none");
       if (index === indexSlide) {
@@ -100,7 +102,6 @@ const slider = (
       if (!e.target.closest(`.${portfolioBtn}`)) {
         return;
       }
-      debugger;
       !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
 
       if (e.target.closest(`#${arrowRight}`)) {

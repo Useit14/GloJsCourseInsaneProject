@@ -14,7 +14,6 @@ const repairSlider = () => {
     types.forEach((type, typeIndex) => {
       if (typeIndex === index) {
         type.classList.add("active");
-        debugger;
 
         classSlides = type.children[0].classList[0];
       } else {
@@ -26,8 +25,18 @@ const repairSlider = () => {
     });
   };
 
+  const clearActiveTypes = () => {
+    const types = document.querySelectorAll(".repair-types-nav__item");
+    types.forEach((type, index) => {
+      type.classList.remove("none");
+      type.classList.remove("active");
+      if (index === 0) {
+        type.classList.add("active");
+      }
+    });
+  };
+
   list.addEventListener("click", (e) => {
-    debugger;
     const index =
       parseInt(e.target.classList[2][e.target.classList[2].search(/(\d)/gi)]) -
       1;
@@ -62,6 +71,27 @@ const repairSlider = () => {
     false,
     false
   );
+
+  window.addEventListener("resize", () => {
+    if (screen.width <= 1024) {
+      idInterval = slider(
+        "nav-wrap-repair",
+        `repair-types-nav__item`,
+        "active",
+        "nav-arrow ",
+        "nav-arrow-repair-left_base",
+        "nav-arrow-repair-right_base",
+        0,
+        null,
+        null,
+        false,
+        true,
+        false
+      );
+    } else {
+      clearActiveTypes();
+    }
+  });
 };
 
 export default repairSlider;
