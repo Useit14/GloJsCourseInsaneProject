@@ -13,6 +13,22 @@ menu();
 modal("popup-repair-types", "link-list a", { isCarousel: false });
 modal("popup-privacy", "link-privacy", { isCarousel: false });
 modal("popup-consultation", "button_wide", { isCarousel: false });
+modal("popup-transparency", "transparency-item__img", {
+  isCarousel: true,
+  isInitActiveSlide: true,
+  classSlides: "popup-transparency-slider__slide",
+  classSlider: "popup-transparency",
+  classActiveSlides: "active",
+  classControlLeft: "transparency_left",
+  classControlRight: "transparency_right",
+  portfolioBtn: "popup-arrow ",
+  classCounter: "slider-counter-content__current",
+  classCounterTotal: "slider-counter-content__total",
+  isWithChangeNode: false,
+  isControl: true,
+  isAuto: false,
+});
+
 modal("popup-portfolio", "portfolio-slider__slide", {
   isCarousel: true,
   isInitActiveSlide: true,
@@ -90,3 +106,21 @@ slider(
 
 repairSlider();
 prompt();
+
+if (screen.width <= 575) {
+  debugger;
+  slider(
+    "transparency-slider-wrap",
+    "transparency-item",
+    "acitve-flex",
+    "slider-arrow ",
+    "transparency-arrow_left",
+    "transparency-arrow_right",
+    0,
+    null,
+    null,
+    false,
+    true,
+    true
+  );
+}

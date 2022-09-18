@@ -13,6 +13,9 @@ const modal = (
     classControlRight = "",
     classCounter = "",
     classCounterTotal = "",
+    isWithChangeNode,
+    isControl,
+    isAuto,
   },
   isPrompt,
   promptTarget
@@ -22,6 +25,7 @@ const modal = (
   const closeBtn = popupContent.querySelector(".close ");
   let idInterval;
   const getIndexActiveSlide = (event) => {
+    debugger;
     const image = event.target.querySelector("img");
     const index = parseInt(image.alt[image.alt.search(/[0-9]/)]);
     return index - 1;
@@ -50,7 +54,9 @@ const modal = (
             isInitActiveSlide && getIndexActiveSlide(event),
             classCounter,
             classCounterTotal,
-            false
+            isWithChangeNode,
+            isControl,
+            isAuto
           );
         } else {
           popupContent.style.visibility = "visible";

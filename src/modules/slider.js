@@ -90,7 +90,7 @@ const slider = (
     slides.forEach((slide, indexSlide) => {
       slide.classList.add("none");
       if (index === indexSlide) {
-        slide.classList.add("active");
+        slide.classList.add(classActiveSlides);
         currentSlide = index;
       }
     });

@@ -1352,6 +1352,10 @@ template,
     font-weight: 900;
 }
 
+#transparency-popup-counter {
+    left: 50%;
+}
+
 .formula-item-popup {
     position: absolute;
     bottom: 90px;
