@@ -7,6 +7,7 @@ import accordion from "./modules/accordion";
 import slider from "./modules/slider";
 import repairSlider from "./modules/repairSlider";
 import prompt from "./modules/prompt";
+import portfolio from "./modules/portfolio";
 
 dropdown("header-contacts__arrow", "header-contacts__phone-number-accord");
 menu();
@@ -27,19 +28,6 @@ modal("popup-transparency", "transparency-item__img", {
   isWithChangeNode: false,
   isControl: true,
   isAuto: false,
-});
-
-modal("popup-portfolio", "portfolio-slider__slide", {
-  isCarousel: true,
-  isInitActiveSlide: true,
-  classSlides: "popup-portfolio-slider__slide",
-  classSlider: "popup-dialog-portfolio",
-  classActiveSlides: "active",
-  classControlLeft: "popup-arrow_left",
-  classControlRight: "popup-arrow_right",
-  portfolioBtn: "popup-arrow",
-  classCounter: "slider-counter-content__current",
-  classCounterTotal: "slider-counter-content__total",
 });
 
 validation("feedback1");
@@ -77,20 +65,6 @@ sendForm({
 accordion("accordion");
 
 slider(
-  "portfolio-slider",
-  "portfolio-slider__slide",
-  "active",
-  "slider-arrow ",
-  "portfolio-arrow_left",
-  "portfolio-arrow_right",
-  null,
-  null,
-  null,
-  true,
-  false
-);
-
-slider(
   "reviews-slider-wrap",
   "reviews-slider__slide",
   "acitve-flex",
@@ -106,9 +80,9 @@ slider(
 
 repairSlider();
 prompt();
+portfolio();
 
 if (screen.width <= 575) {
-  debugger;
   slider(
     "transparency-slider-wrap",
     "transparency-item",

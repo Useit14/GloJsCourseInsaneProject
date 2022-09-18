@@ -25,7 +25,6 @@ const modal = (
   const closeBtn = popupContent.querySelector(".close ");
   let idInterval;
   const getIndexActiveSlide = (event) => {
-    debugger;
     const image = event.target.querySelector("img");
     const index = parseInt(image.alt[image.alt.search(/[0-9]/)]);
     return index - 1;
