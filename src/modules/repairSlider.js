@@ -1,21 +1,20 @@
-import slider from "./slider";
-
+import Swiper, { Navigation, Pagination } from "swiper";
 const repairSlider = () => {
   const list = document.querySelector(".nav-list-repair");
   const types = document.querySelectorAll(".repair-types-slider .type");
-  let idInterval = 0;
-  let classSlides;
+  const btns = list.querySelectorAll("button");
+  const navWrapper = document.querySelector(".nav-wrap");
+
+  let swiper;
+  let swiper2;
 
   const clearActiveRepair = (index) => {
-    const btns = list.querySelectorAll("button");
     btns.forEach((btn) => {
       btn.classList.remove("active");
     });
     types.forEach((type, typeIndex) => {
       if (typeIndex === index) {
         type.classList.add("active");
-
-        classSlides = type.children[0].classList[0];
       } else {
         if (type.classList.entries("active")) {
           type.classList.remove("active");
@@ -25,72 +24,83 @@ const repairSlider = () => {
     });
   };
 
-  const clearActiveTypes = () => {
-    const types = document.querySelectorAll(".repair-types-nav__item");
-    types.forEach((type, index) => {
-      type.classList.remove("none");
-      type.classList.remove("active");
-      if (index === 0) {
-        type.classList.add("active");
-      }
-    });
-  };
-
   list.addEventListener("click", (e) => {
-    const index =
-      parseInt(e.target.classList[2][e.target.classList[2].search(/(\d)/gi)]) -
-      1;
-    clearInterval(idInterval);
+    const index = parseInt(
+      e.target.classList[2][e.target.classList[2].search(/(\d)/gi)]
+    );
     clearActiveRepair(index);
     e.target.classList.add("active");
-    idInterval = slider(
-      "repair-types-slider-wrap",
-      `${classSlides}`,
-      "active",
-      "slider-arrow ",
-      "repair-types-arrow_left",
-      "repair-types-arrow_right",
-      index,
-      "slider-counter-content__current",
-      "slider-counter-content__total",
-      false,
-      false
-    );
+    swiper = new Swiper(`#repair-swiper${index}`, {
+      direction: "horizontal",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: `.swiper-button-next${index}`,
+        prevEl: `.swiper-button-prev${index}`,
+      },
+      modules: [Navigation, Pagination],
+    });
   });
 
-  idInterval = slider(
-    "repair-types-slider-wrap",
-    `repair-types1-slider__slide`,
-    "active",
-    "slider-arrow ",
-    "repair-types-arrow_left",
-    "repair-types-arrow_right",
-    0,
-    "slider-counter-content__current",
-    "slider-counter-content__total",
-    false,
-    false
-  );
+  clearActiveRepair(0);
+  swiper = new Swiper("#repair-swiper0", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next0",
+      prevEl: ".swiper-button-prev0",
+    },
+    modules: [Navigation, Pagination],
+  });
 
   window.addEventListener("resize", () => {
     if (screen.width <= 1024) {
-      idInterval = slider(
-        "nav-wrap-repair",
-        `repair-types-nav__item`,
-        "active",
-        "nav-arrow ",
-        "nav-arrow-repair-left_base",
-        "nav-arrow-repair-right_base",
-        0,
-        null,
-        null,
-        false,
-        true,
-        false
-      );
-    } else {
-      clearActiveTypes();
+      swiper2 = new Swiper("#repair-nav-swiper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        keyboard: {
+          enabled: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next-repair",
+          prevEl: ".swiper-button-prev-repair",
+        },
+        modules: [Navigation],
+      });
     }
+    navWrapper.addEventListener("click", (e) => {
+      let indexBtn;
+      if (e.target.closest(".nav-arrow")) {
+        btns.forEach((element, index) => {
+          if (element.classList.contains("active")) {
+            indexBtn = index;
+          }
+        });
+        if (e.target.closest(".swiper-button-prev-repair")) {
+          indexBtn = indexBtn ? (indexBtn === 0 ? 0 : indexBtn - 1) : 1;
+          indexBtn > -1 && btns[indexBtn].click();
+        } else {
+          indexBtn = indexBtn ? (indexBtn === 0 ? 0 : indexBtn + 1) : 1;
+          indexBtn < btns.length && btns[indexBtn].click();
+        }
+      }
+      e.stopImmediatePropagation();
+    });
   });
 };
 

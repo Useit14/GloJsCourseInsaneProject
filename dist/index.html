@@ -16,14 +16,12 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/main.js" defer></script>
 
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Relax Live</title>
   </head>
   <body>
@@ -42,9 +40,7 @@
               >
             </div>
             <div class="header-contacts__phone-number-accord">
-              <a
-                class="header-contacts__phone-number hidden"
-                href="tel:+79876543210"
+              <a class="header-contacts__phone-number" href="tel:+79876543210"
                 >+7 (987) 654-32-10</a
               >
               <div class="header-contacts__messagers">
@@ -611,132 +607,327 @@
         <div class="row row_reverse">
           <div class="repair-types-slider-wrap">
             <div class="repair-types-slider">
-              <div class="types-repair1 type">
-                <div class="repair-types1-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
+              <div class="types-repair0 type" id="repair-swiper0">
+                <div class="swiper-wrapper">
+                  <div class="repair-types0-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types0-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/cosmetic.jpg"
+                      alt="cosmetic"
+                    />
+                  </div>
+                  <div class="repair-types0-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
+                  <div class="repair-types0-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types0-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/cosmetic.jpg"
+                      alt="cosmetic"
+                    />
+                  </div>
                 </div>
-                <div class="repair-types1-slider__slide">
-                  <img
-                    src="./images/repair-types/cosmetic.jpg"
-                    alt="cosmetic"
-                  />
-                </div>
-                <div class="repair-types1-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
-                </div>
-                <div class="repair-types1-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
-                <div class="repair-types1-slider__slide">
-                  <img
-                    src="./images/repair-types/cosmetic.jpg"
-                    alt="cosmetic"
-                  />
-                </div>
+                <button
+                  class="slider-arrow swiper-button-prev swiper-button-prev0"
+                  id="repair-types-arrow_left"
+                >
+                  <svg
+                    width="18"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 18 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="slider-arrow swiper-button-next swiper-button-next0"
+                  id="repair-types-arrow_right"
+                >
+                  <svg
+                    width="17"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 17 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-counter"></div>
               </div>
-              <div class="types-repair2 type none">
-                <div class="repair-types2-slider__slide">
-                  <img
-                    src="./images/repair-types/cosmetic.jpg"
-                    alt="cosmetic"
-                  />
+              <div class="types-repair1 type" id="repair-swiper1">
+                <div class="swiper-wrapper">
+                  <div class="repair-types1-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/cosmetic.jpg"
+                      alt="cosmetic"
+                    />
+                  </div>
+                  <div class="repair-types1-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types1-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
+                  <div class="repair-types1-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
                 </div>
-                <div class="repair-types2-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
-                <div class="repair-types2-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
-                </div>
-                <div class="repair-types2-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
+                <button
+                  class="slider-arrow swiper-button-prev swiper-button-prev1"
+                  id="repair-types-arrow_left"
+                >
+                  <svg
+                    width="18"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 18 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="slider-arrow swiper-button-next swiper-button-next1"
+                  id="repair-types-arrow_right"
+                >
+                  <svg
+                    width="17"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 17 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-counter"></div>
               </div>
-              <div class="types-repair3 type none">
-                <div class="repair-types3-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
+              <div class="types-repair2 type" id="repair-swiper2">
+                <div class="swiper-wrapper">
+                  <div class="repair-types2-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
+                  <div class="repair-types2-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types2-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
                 </div>
-                <div class="repair-types3-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
-                <div class="repair-types3-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
-                </div>
+                <button
+                  class="slider-arrow swiper-button-prev swiper-button-prev2"
+                  id="repair-types-arrow_left"
+                >
+                  <svg
+                    width="18"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 18 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="slider-arrow swiper-button-next swiper-button-next2"
+                  id="repair-types-arrow_right"
+                >
+                  <svg
+                    width="17"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 17 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-counter"></div>
               </div>
-              <div class="types-repair4 type none">
-                <div class="repair-types4-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
+              <div class="types-repair3 type" id="repair-swiper3">
+                <div class="swiper-wrapper">
+                  <div class="repair-types3-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types3-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/cosmetic.jpg"
+                      alt="cosmetic"
+                    />
+                  </div>
                 </div>
-                <div class="repair-types4-slider__slide">
-                  <img
-                    src="./images/repair-types/cosmetic.jpg"
-                    alt="cosmetic"
-                  />
-                </div>
+                <button
+                  class="slider-arrow swiper-button-prev swiper-button-prev3"
+                  id="repair-types-arrow_left"
+                >
+                  <svg
+                    width="18"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 18 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="slider-arrow swiper-button-next swiper-button-next3"
+                  id="repair-types-arrow_right"
+                >
+                  <svg
+                    width="17"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 17 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-counter"></div>
               </div>
-              <div class="types-repair5 type none">
-                <div class="repair-types5-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
+              <div class="types-repair4 type" id="repair-swiper4">
+                <div class="swiper-wrapper">
+                  <div class="repair-types4-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
+                  <div class="repair-types4-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types4-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
+                  <div class="repair-types4-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/electro.jpg"
+                      alt="electro"
+                    />
+                  </div>
+                  <div class="repair-types4-slider__slide swiper-slide">
+                    <img
+                      src="./images/repair-types/capital.jpg"
+                      alt="capital"
+                    />
+                  </div>
                 </div>
-                <div class="repair-types5-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
-                <div class="repair-types5-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
-                </div>
-                <div class="repair-types5-slider__slide">
-                  <img src="./images/repair-types/electro.jpg" alt="electro" />
-                </div>
-                <div class="repair-types5-slider__slide">
-                  <img src="./images/repair-types/capital.jpg" alt="capital" />
-                </div>
+                <button
+                  class="slider-arrow swiper-button-prev swiper-button-prev4"
+                  id="repair-types-arrow_left"
+                >
+                  <svg
+                    width="18"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 18 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <button
+                  class="slider-arrow swiper-button-next swiper-button-next4"
+                  id="repair-types-arrow_right"
+                >
+                  <svg
+                    width="17"
+                    height="12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 17 12"
+                    preserveAspectRatio="xMinYMin meet"
+                  >
+                    <path
+                      d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                      fill="#322823"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-counter"></div>
               </div>
             </div>
             <!-- /.repair-types-slider -->
-            <div
-              class="slider-counter slider-counter-repair slider-counter-responsive"
-              id="repair-counter"
-            >
-              <div class="slider-counter-content">
-                <div class="slider-counter-content__current">1</div>
-                <div class="slider-counter-content__total">3</div>
-              </div>
-            </div>
-            <div
-              class="slider-arrow slider-arrow_left"
-              id="repair-types-arrow_left"
-            >
-              <svg
-                width="18"
-                height="12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 18 12"
-                preserveAspectRatio="xMinYMin meet"
-              >
-                <path
-                  d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
-                  fill="#322823"
-                ></path>
-              </svg>
-            </div>
-            <div
-              class="slider-arrow slider-arrow_right"
-              id="repair-types-arrow_right"
-            >
-              <svg
-                width="17"
-                height="12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 17 12"
-                preserveAspectRatio="xMinYMin meet"
-              >
-                <path
-                  d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
-                  fill="#322823"
-                ></path>
-              </svg>
-            </div>
             <div class="link-list link-list-repair desktop-hide">
               <a
                 >Полный список услуг и цен
@@ -763,11 +954,11 @@
             </div>
             <!-- /.section-title repair-types-title -->
             <div class="nav-wrap nav-wrap-repair">
-              <nav class="nav repair-types-nav">
-                <div class="nav-list nav-list-repair">
+              <nav class="nav repair-types-nav" id="repair-nav-swiper">
+                <div class="nav-list nav-list-repair swiper-wrapper">
                   <button
                     type="button"
-                    class="button_o repair-types-nav__item repair-types-nav__item-1 active"
+                    class="button_o repair-types-nav__item repair-types-nav__item-0 active swiper-slide"
                   >
                     <svg
                       width="259"
@@ -787,7 +978,7 @@
                   ><!-- /.repair-types__nav-item -->
                   <button
                     type="button"
-                    class="button_o repair-types-nav__item repair-types-nav__item-2"
+                    class="button_o repair-types-nav__item repair-types-nav__item-1 swiper-slide"
                   >
                     <svg
                       width="300"
@@ -807,7 +998,7 @@
                   ><!-- /.repair-types__nav-item -->
                   <button
                     type="button"
-                    class="button_o repair-types-nav__item repair-types-nav__item-3"
+                    class="button_o repair-types-nav__item repair-types-nav__item-2 swiper-slide"
                   >
                     <svg
                       width="281"
@@ -827,7 +1018,7 @@
                   ><!-- /.repair-types__nav-item -->
                   <button
                     type="button"
-                    class="button_o repair-types-nav__item repair-types-nav__item-4"
+                    class="button_o repair-types-nav__item repair-types-nav__item-3 swiper-slide"
                   >
                     <svg
                       width="268"
@@ -847,7 +1038,7 @@
                   ><!-- /.repair-types__nav-item -->
                   <button
                     type="button"
-                    class="button_o repair-types-nav__item repair-types-nav__item-5"
+                    class="button_o repair-types-nav__item repair-types-nav__item-4 swiper-slide"
                   >
                     <svg
                       width="324"
@@ -869,7 +1060,7 @@
               </nav>
               <!-- /.repair-types__nav -->
               <div
-                class="nav-arrow nav-arrow_left desktop-hide"
+                class="nav-arrow nav-arrow_left desktop-hide swiper-button-prev swiper-button-prev-repair"
                 id="nav-arrow-repair-left_base"
               >
                 <svg
@@ -888,7 +1079,7 @@
                 </svg>
               </div>
               <div
-                class="nav-arrow nav-arrow_right desktop-hide"
+                class="nav-arrow nav-arrow_right desktop-hide swiper-button-next swiper-button-next-repair"
                 id="nav-arrow-repair-right_base"
               >
                 <svg
@@ -1006,102 +1197,102 @@
           Вдохновляющее портфолио <span>реализованное нами</span>
         </div>
         <div class="portfolio-slider-wrap">
-          <div class="portfolio-slider-mobile tablet-hide desktop-hide">
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_1.jpg"
-                alt="img_1"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_2.jpg"
-                alt="img_2"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_3.jpg"
-                alt="img_3"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_4.jpg"
-                alt="img_4"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_5.jpg"
-                alt="img_5"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_6.jpg"
-                alt="img_6"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_4.jpg"
-                alt="img_1"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_3.jpg"
-                alt="img_2"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_2.jpg"
-                alt="img_3"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <div class="portfolio-slider__slide-frame">
-              <img
-                class="portfolio-slider__slide-frame-img"
-                src="./images/portfolio/img_1.jpg"
-                alt="img_4"
-              />
-              <div class="item-hover"></div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div
-              class="slider-counter slider-counter-responsive desktop-hide"
-              id="portfolio-counter"
-            >
-              <div class="slider-counter-content">
-                <div class="slider-counter-content__current">1</div>
-                <div class="slider-counter-content__total">3</div>
+          <div
+            class="portfolio-slider-mobile tablet-hide desktop-hide"
+            id="porfolio-swiper-mobile"
+          >
+            <div class="swiper-wrapper">
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_1.jpg"
+                  alt="img_1"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_2.jpg"
+                  alt="img_2"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_3.jpg"
+                  alt="img_3"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_4.jpg"
+                  alt="img_4"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_5.jpg"
+                  alt="img_5"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_6.jpg"
+                  alt="img_6"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_4.jpg"
+                  alt="img_1"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_3.jpg"
+                  alt="img_2"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_2.jpg"
+                  alt="img_3"
+                />
+                <div class="item-hover"></div>
+              </div>
+              <div class="portfolio-slider__slide-frame swiper-slide">
+                <img
+                  class="portfolio-slider__slide-frame-img"
+                  src="./images/portfolio/img_1.jpg"
+                  alt="img_4"
+                />
+                <div class="item-hover"></div>
               </div>
             </div>
+            <!-- /portfolio-slider__slide -->
             <div
-              class="slider-arrow-tablet-mobile slider-arrow-tablet-mobile_left tablet-hide desktop-hide"
+              class="slider-counter slider-counter-responsive desktop-hide swiper-pagination"
+              id="portfolio-counter"
+            ></div>
+            <div
+              class="slider-arrow-tablet-mobile slider-arrow-tablet-mobile_left tablet-hide desktop-hide swiper-button-prev"
               id="portfolio-arrow-mobile_left"
             >
               <svg
@@ -1123,7 +1314,7 @@
               </svg>
             </div>
             <div
-              class="slider-arrow-tablet-mobile slider-arrow-tablet-mobile_right tablet-hide desktop-hide"
+              class="slider-arrow-tablet-mobile slider-arrow-tablet-mobile_right tablet-hide desktop-hide swiper-button-next"
               id="portfolio-arrow-mobile_right"
               disabled="disabled"
             >
@@ -1148,169 +1339,175 @@
           </div>
           <!-- /portfolio-slider -->
 
-          <button
-            class="slider-arrow slider-arrow_left-portfolio mobile-hide none"
-            id="portfolio-arrow_left"
+          <div
+            class="portfolio-slider mobile-hide"
+            id="porfolio-swiper-desktop"
           >
-            <svg
-              width="18"
-              height="12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 18 12"
-              preserveAspectRatio="xMinYMin meet"
+            <div class="swiper-wrapper">
+              <div class="portfolio-slider__slide fade-tab swiper-slide">
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_1.jpg"
+                    alt="img_1"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_2.jpg"
+                    alt="img_2"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide fade-tab swiper-slide">
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_3.jpg"
+                    alt="img_3"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_4.jpg"
+                    alt="img_4"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide fade-tab swiper-slide">
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_5.jpg"
+                    alt="img_5"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_6.jpg"
+                    alt="img_6"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide fade-tab swiper-slide">
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_4.jpg"
+                    alt="img_1"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_3.jpg"
+                    alt="img_2"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+              <div class="portfolio-slider__slide fade-tab swiper-slide">
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_2.jpg"
+                    alt="img_3"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+                <div class="portfolio-slider__slide-frame">
+                  <img
+                    class="portfolio-slider__slide-frame-img"
+                    src="./images/portfolio/img_1.jpg"
+                    alt="img_4"
+                  />
+                  <div class="item-hover">
+                    <img src="./images/zoom.svg" alt="zoom" />
+                    <span>Нажмите, чтобы<br />увеличить</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /portfolio-slider__slide -->
+            </div>
+            <button
+              class="slider-arrow slider-arrow_left-portfolio mobile-hide swiper-button-prev"
+              id="portfolio-arrow_left"
             >
-              <path
-                d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
-                fill="#322823"
-              ></path>
-            </svg>
-          </button>
-          <button
-            class="slider-arrow slider-arrow_right-portfolio mobile-hide"
-            id="portfolio-arrow_right"
-          >
-            <svg
-              width="17"
-              height="12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 18 12"
-              preserveAspectRatio="xMinYMin meet"
+              <svg
+                width="18"
+                height="12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 18 12"
+                preserveAspectRatio="xMinYMin meet"
+              >
+                <path
+                  d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+                  fill="#322823"
+                ></path>
+              </svg>
+            </button>
+            <button
+              class="slider-arrow slider-arrow_right-portfolio mobile-hide swiper-button-next"
+              id="portfolio-arrow_right"
             >
-              <path
-                d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
-                fill="#322823"
-              ></path>
-            </svg>
-          </button>
-          <div class="portfolio-slider mobile-hide">
-            <div class="portfolio-slider__slide fade-tab">
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_1.jpg"
-                  alt="img_1"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_2.jpg"
-                  alt="img_2"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide fade-tab">
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_3.jpg"
-                  alt="img_3"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_4.jpg"
-                  alt="img_4"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide fade-tab">
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_5.jpg"
-                  alt="img_5"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_6.jpg"
-                  alt="img_6"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide fade-tab">
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_4.jpg"
-                  alt="img_1"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_3.jpg"
-                  alt="img_2"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-            </div>
-            <!-- /portfolio-slider__slide -->
-            <div class="portfolio-slider__slide fade-tab">
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_2.jpg"
-                  alt="img_3"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-              <div class="portfolio-slider__slide-frame">
-                <img
-                  class="portfolio-slider__slide-frame-img"
-                  src="./images/portfolio/img_1.jpg"
-                  alt="img_4"
-                />
-                <div class="item-hover">
-                  <img src="./images/zoom.svg" alt="zoom" />
-                  <span>Нажмите, чтобы<br />увеличить</span>
-                </div>
-              </div>
-            </div>
-            <!-- /portfolio-slider__slide -->
+              <svg
+                width="17"
+                height="12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 18 12"
+                preserveAspectRatio="xMinYMin meet"
+              >
+                <path
+                  d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+                  fill="#322823"
+                ></path>
+              </svg>
+            </button>
           </div>
+
           <!-- /portfolio-slider -->
         </div>
         <!-- /slider-wrap-->
@@ -1329,11 +1526,11 @@
         <div class="section-subtitle">
           Никаких скрытых платежей и сорванных сроков!
         </div>
-        <div class="transparency-slider-wrap">
-          <div class="transparency-slider row">
-            <div class="transparency-item">
+        <div class="transparency-slider-wrap" id="transparency-mobile-swiper">
+          <div class="transparency-slider row swiper-wrapper">
+            <div class="transparency-item swiper-slide">
               <div class="transparency-item__img">
-                <img src="./images/transparency/item_img.jpg" alt="document1" />
+                <img src="./images/transparency/item_img.jpg" alt="document" />
                 <div class="item-hover">
                   <img src="./images/zoom.svg" alt="zoom" />
                   <span>Нажмите, чтобы<br />увеличить</span>
@@ -1348,9 +1545,9 @@
                 показатели выполнения работы, прав и обязанности сторон.
               </div>
             </div>
-            <div class="transparency-item">
+            <div class="transparency-item swiper-slide">
               <div class="transparency-item__img">
-                <img src="./images/transparency/item_img.jpg" alt="document2" />
+                <img src="./images/transparency/item_img.jpg" alt="document" />
                 <div class="item-hover">
                   <img src="./images/zoom.svg" alt="zoom" />
                   <span>Нажмите, чтобы<br />увеличить</span>
@@ -1366,9 +1563,9 @@
                 строительства не меняется.
               </div>
             </div>
-            <div class="transparency-item">
+            <div class="transparency-item swiper-slide">
               <div class="transparency-item__img">
-                <img src="./images/transparency/item_img.jpg" alt="document3" />
+                <img src="./images/transparency/item_img.jpg" alt="document" />
                 <div class="item-hover">
                   <img src="./images/zoom.svg" alt="zoom" />
                   <span>Нажмите, чтобы<br />увеличить</span>
@@ -1387,7 +1584,7 @@
           </div>
           <!-- /transparency-slider row -->
           <div
-            class="slider-arrow slider-arrow_left"
+            class="slider-arrow slider-arrow_left swiper-button-prev"
             id="transparency-arrow_left"
           >
             <svg
@@ -1405,7 +1602,7 @@
             </svg>
           </div>
           <div
-            class="slider-arrow slider-arrow_right"
+            class="slider-arrow slider-arrow_right swiper-button-next"
             id="transparency-arrow_right"
           >
             <svg
@@ -1584,9 +1781,76 @@
       <div class="section-title reviews__title">
         Мы рады делать <span>клиентов счастливыми</span>
       </div>
-      <div class="reviews-slider-wrap">
+      <div class="reviews-slider-wrap" id="reviews-swiper">
+        <div class="reviews-slider swiper-wrapper">
+          <div class="reviews-slider__slide swiper-slide">
+            <div class="reviews-slider__slide-img">
+              <img src="./images/reviews/ava1.jpg" alt="" />
+            </div>
+            <div class="reviews-slider__slide-date">05.02.2020</div>
+            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
+            <div class="reviews-slider__slide-descr">
+              Выражаю свою благодарность компании, проводившей полный ремонт
+              *под ключ* в моей однокомнатной квартире. Предварительная смета
+              была расписана подробно, понятно по каждому виду работ.
+              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-slider__slide swiper-slide">
+            <div class="reviews-slider__slide-img">
+              <img src="./images/reviews/ava2.jpg" alt="" />
+            </div>
+            <div class="reviews-slider__slide-date">08.03.2020</div>
+            <div class="reviews-slider__slide-title">Дюгурова Анютка</div>
+            <div class="reviews-slider__slide-descr">
+              Предварительная смета была расписана подробно, понятно по каждому
+              виду работ. Фактическая смета Выражаю свою благодарность компании,
+              проводившей полный ремонт *под ключ* в моей однокомнатной
+              квартире... <a class="link-reviews-detail">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-slider__slide swiper-slide">
+            <div class="reviews-slider__slide-img">
+              <img src="./images/reviews/ava3.jpg" alt="" />
+            </div>
+            <div class="reviews-slider__slide-date">05.12.2020</div>
+            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
+            <div class="reviews-slider__slide-descr">
+              Выражаю свою благодарность компании, проводившей полный ремонт
+              *под ключ* в моей однокомнатной квартире. Предварительная смета
+              была расписана подробно, понятно по каждому виду работ.
+              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-slider__slide swiper-slide">
+            <div class="reviews-slider__slide-img">
+              <img src="./images/reviews/ava4.jpg" alt="" />
+            </div>
+            <div class="reviews-slider__slide-date">05.02.2020</div>
+            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
+            <div class="reviews-slider__slide-descr">
+              Предварительная смета была расписана подробно, понятно по каждому
+              виду работ. Фактическая смета Выражаю свою благодарность компании,
+              проводившей полный ремонт *под ключ* в моей однокомнатной
+              квартире... <a class="link-reviews-detail">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-slider__slide swiper-slide">
+            <div class="reviews-slider__slide-img">
+              <img src="./images/reviews/ava5.jpg" alt="" />
+            </div>
+            <div class="reviews-slider__slide-date">05.02.2020</div>
+            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
+            <div class="reviews-slider__slide-descr">
+              Выражаю свою благодарность компании, проводившей полный ремонт
+              *под ключ* в моей однокомнатной квартире. Предварительная смета
+              была расписана подробно, понятно по каждому виду работ.
+              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
+            </div>
+          </div>
+        </div>
         <button
-          class="slider-arrow slider-arrow_left slider-arrow_left"
+          class="slider-arrow slider-arrow_left slider-arrow_left swiper-button-prev"
           id="reviews-arrow_left"
         >
           <svg
@@ -1604,7 +1868,7 @@
           </svg>
         </button>
         <button
-          class="slider-arrow slider-arrow_right"
+          class="slider-arrow slider-arrow_right swiper-button-next"
           id="reviews-arrow_right"
         >
           <svg
@@ -1621,73 +1885,7 @@
             ></path>
           </svg>
         </button>
-        <div class="reviews-slider">
-          <div class="reviews-slider__slide none">
-            <div class="reviews-slider__slide-img">
-              <img src="./images/reviews/ava1.jpg" alt="" />
-            </div>
-            <div class="reviews-slider__slide-date">05.02.2020</div>
-            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
-            <div class="reviews-slider__slide-descr">
-              Выражаю свою благодарность компании, проводившей полный ремонт
-              *под ключ* в моей однокомнатной квартире. Предварительная смета
-              была расписана подробно, понятно по каждому виду работ.
-              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-slider__slide none">
-            <div class="reviews-slider__slide-img">
-              <img src="./images/reviews/ava2.jpg" alt="" />
-            </div>
-            <div class="reviews-slider__slide-date">08.03.2020</div>
-            <div class="reviews-slider__slide-title">Дюгурова Анютка</div>
-            <div class="reviews-slider__slide-descr">
-              Предварительная смета была расписана подробно, понятно по каждому
-              виду работ. Фактическая смета Выражаю свою благодарность компании,
-              проводившей полный ремонт *под ключ* в моей однокомнатной
-              квартире... <a class="link-reviews-detail">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-slider__slide none">
-            <div class="reviews-slider__slide-img">
-              <img src="./images/reviews/ava3.jpg" alt="" />
-            </div>
-            <div class="reviews-slider__slide-date">05.12.2020</div>
-            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
-            <div class="reviews-slider__slide-descr">
-              Выражаю свою благодарность компании, проводившей полный ремонт
-              *под ключ* в моей однокомнатной квартире. Предварительная смета
-              была расписана подробно, понятно по каждому виду работ.
-              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-slider__slide none">
-            <div class="reviews-slider__slide-img">
-              <img src="./images/reviews/ava4.jpg" alt="" />
-            </div>
-            <div class="reviews-slider__slide-date">05.02.2020</div>
-            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
-            <div class="reviews-slider__slide-descr">
-              Предварительная смета была расписана подробно, понятно по каждому
-              виду работ. Фактическая смета Выражаю свою благодарность компании,
-              проводившей полный ремонт *под ключ* в моей однокомнатной
-              квартире... <a class="link-reviews-detail">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-slider__slide none">
-            <div class="reviews-slider__slide-img">
-              <img src="./images/reviews/ava5.jpg" alt="" />
-            </div>
-            <div class="reviews-slider__slide-date">05.02.2020</div>
-            <div class="reviews-slider__slide-title">Анютка Дюгурова</div>
-            <div class="reviews-slider__slide-descr">
-              Выражаю свою благодарность компании, проводившей полный ремонт
-              *под ключ* в моей однокомнатной квартире. Предварительная смета
-              была расписана подробно, понятно по каждому виду работ.
-              Фактическая смета ... <a class="link-reviews-detail">Подробнее</a>
-            </div>
-          </div>
-        </div>
+
         <!-- /reviews-slider -->
       </div>
       <div class="slider-dots slider-dots-reviews slider-dots-base">
@@ -2506,7 +2704,7 @@
             <div class="nav-wrap nav-wrap-repair">
               <nav class="nav-popup nav-popup-repair-types transparancy-cut">
                 <div class="nav-list nav-list-popup-repair">
-                  <button class="button_o popup-repair-types-nav__item">
+                  <button class="button_o popup-repair-types-nav__item active">
                     Потолок: Демонтажные работы
                   </button>
                   <button class="button_o popup-repair-types-nav__item">
@@ -3251,607 +3449,746 @@
       </div>
       <div class="popup-dialog popup-dialog-portfolio">
         <div class="row">
-          <div class="popup-portfolio-slider-wrap">
-            <div class="close tablet-hide desktop-hide">
-              <svg
-                width="22"
-                height="22"
-                fill="none"
-                viewBox="0 0 22 22"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
-                  fill="#322823"
-                  fill-opacity=".5"
-                ></path>
-              </svg>
-            </div>
-            <div class="popup-portfolio-slider">
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/1.jpg" alt="" />
+          <div class="close tablet-hide desktop-hide">
+            <svg
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 22 22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
+                fill="#322823"
+                fill-opacity=".5"
+              ></path>
+            </svg>
+          </div>
+          <div class="popup-portfolio-slider-wrap" id="porfolio-popup-swiper">
+            <div class="popup-portfolio-slider swiper-wrapper">
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/1.jpg" alt="1" />
               </div>
-              <div class="popup-portfolio-slider__slide">
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/2.jpg" alt="2" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/3.jpg" alt="3" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/4.jpg" alt="4" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/5.jpg" alt="5" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/6.jpg" alt="6" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/4.jpg" alt="7" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/3.jpg" alt="8" />
+              </div>
+              <div class="popup-portfolio-slider__slide swiper-slide">
                 <img src="./images/popup/2.jpg" alt="" />
               </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/3.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/4.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/5.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/6.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/4.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/3.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/2.jpg" alt="" />
-              </div>
-              <div class="popup-portfolio-slider__slide">
-                <img src="./images/popup/1.jpg" alt="" />
+              <div class="popup-portfolio-slider__slide swiper-slide">
+                <img src="./images/popup/1.jpg" alt="9" />
               </div>
               <!-- /popup-portfolio-slide -->
             </div>
-          </div>
-          <div class="slider-counter" id="popup-portfolio-counter">
-            <div class="slider-counter-content">
-              <div class="slider-counter-content__current">1</div>
-              <div class="slider-counter-content__total">3</div>
-            </div>
-          </div>
-          <div class="popup-arrow popup-arrow_left" id="popup_portfolio_left">
-            <svg
-              width="32"
-              height="44"
-              fill="none"
-              viewBox="0 0 32 44"
-              preserveAspectRatio="xMinYMin meet"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="slider-counter swiper-pagination"
+              id="popup-portfolio-counter"
             >
-              <path
-                d="M30 41.999l-28-20 28-20"
-                stroke="#fff"
-                stroke-opacity=".5"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
-          <div class="popup-arrow popup-arrow_right" id="popup_portfolio_right">
-            <svg
-              width="32"
-              height="44"
-              fill="none"
-              viewBox="0 0 32 44"
-              preserveAspectRatio="xMinYMin meet"
-              xmlns="http://www.w3.org/2000/svg"
+              <div class="slider-counter-content">
+                <div class="slider-counter-content__current">1</div>
+                <div class="slider-counter-content__total">3</div>
+              </div>
+            </div>
+            <div
+              class="popup-arrow popup-arrow_left swiper-button-prev"
+              id="popup_portfolio_left"
             >
-              <path
-                d="M2 1.999l28 20-28 20"
-                stroke="#fff"
-                stroke-opacity=".5"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  64<span> м<sup>2</sup></span>
-                </div>
-              </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  51<span> дней</span>
-                </div>
-              </div>
+              <svg
+                width="32"
+                height="44"
+                fill="none"
+                viewBox="0 0 32 44"
+                preserveAspectRatio="xMinYMin meet"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30 41.999l-28-20 28-20"
+                  stroke="#fff"
+                  stroke-opacity=".5"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
             </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Косметический</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">111 000 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
-                </div>
-                <div class="popup-portfolio-text__value">129 000 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
-                </div>
-                <div class="popup-portfolio-text__value">240 000 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
+            <div
+              class="popup-arrow popup-arrow_right swiper-button-next"
+              id="popup_portfolio_right"
+            >
+              <svg
+                width="32"
+                height="44"
+                fill="none"
+                viewBox="0 0 32 44"
+                preserveAspectRatio="xMinYMin meet"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 1.999l28 20-28 20"
+                  stroke="#fff"
+                  stroke-opacity=".5"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
             </div>
           </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  97<span> м<sup>2</sup></span>
+          <div id="porflotio-text-swiper">
+            <div class="swiper-wrapper">
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      64<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      51<span> дней</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Косметический</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      111 000 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      129 000 &#8381;
+                    </div>
+                  </div>
+                </div>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      240 000 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  98<span> дней</span>
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      97<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      98<span> дней</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Евроремонт</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      135 900 &#8381;
+                    </div>
+                  </div>
+                </div>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      346 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Евроремонт</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      56<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      54<span> дней</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">135 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Косметический</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      120 000 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      180 000 &#8381;
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">346 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  56<span> м<sup>2</sup></span>
-                </div>
-              </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  54<span> дней</span>
-                </div>
-              </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Косметический</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">120 000 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
-                </div>
-                <div class="popup-portfolio-text__value">180 000 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
-                </div>
-                <div class="popup-portfolio-text__value">300 000 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  102<span> м<sup>2</sup></span>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      300 000 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  99<span> дней</span>
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      102<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      99<span> дней</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Евроремонт</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
+                </div>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Евроремонт</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      82<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      90<span> дней</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">
+                      Индивидуальный
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  82<span> м<sup>2</sup></span>
-                </div>
-              </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  90<span> дней</span>
-                </div>
-              </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Индивидуальный</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
-                </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
-                </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  82<span> м<sup>2</sup></span>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  90<span> дней</span>
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      82<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      90<span> дней</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">
+                      Индивидуальный
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
+                </div>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Индивидуальный</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      87<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      74<span> дней</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Евроремонт</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  87<span> м<sup>2</sup></span>
-                </div>
-              </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  74<span> дней</span>
-                </div>
-              </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Евроремонт</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
-                </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
-                </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  56<span> м<sup>2</sup></span>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  54<span> дней</span>
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      56<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      54<span> дней</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Косметический</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      120 000 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      180 000 &#8381;
+                    </div>
+                  </div>
+                </div>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      300 000 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Косметический</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">120 000 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      102<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      99<span> дней</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">180 000 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">Евроремонт</div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">300 000 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  102<span> м<sup>2</sup></span>
-                </div>
-              </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  99<span> дней</span>
-                </div>
-              </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Евроремонт</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
-                </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
-                </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
-              </div>
-            </div>
-          </div>
-          <!-- /popup-portfolio-text -->
-          <div class="popup-portfolio-text none">
-            <div class="popup-portfolio-text-important">
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Площадь квартиры</div>
-                <div class="popup-portfolio-text__value_big">
-                  82<span> м<sup>2</sup></span>
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
               </div>
-              <div class="popup-portfolio-text-wrap">
-                <div class="popup-portfolio-text__title">Срок<br />ремонта</div>
-                <div class="popup-portfolio-text__value_big">
-                  90<span> дней</span>
+              <!-- /popup-portfolio-text -->
+              <div class="popup-portfolio-text swiper-slide">
+                <div class="popup-portfolio-text-important">
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Площадь квартиры
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      82<span> м<sup>2</sup></span>
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text-wrap">
+                    <div class="popup-portfolio-text__title">
+                      Срок<br />ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value_big">
+                      90<span> дней</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="popup-portfolio-text-price">
-              <div>
-                <div class="popup-portfolio-text__title">Вид ремонта</div>
-                <div class="popup-portfolio-text__value">Индивидуальный</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">Стоимость работ</div>
-                <div class="popup-portfolio-text__value">200 500 &#8381;</div>
-              </div>
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Стоимость материалов
+                <div class="popup-portfolio-text-price">
+                  <div>
+                    <div class="popup-portfolio-text__title">Вид ремонта</div>
+                    <div class="popup-portfolio-text__value">
+                      Индивидуальный
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость работ
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      200 500 &#8381;
+                    </div>
+                  </div>
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Стоимость материалов
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      185 900 &#8381;
+                    </div>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">185 900 &#8381;</div>
-              </div>
-            </div>
-            <!-- /popup-portfolio-text-price -->
-            <div class="popup-portfolio-text-authors">
-              <div>
-                <div class="popup-portfolio-text__title">
-                  Общая стоимость ремонта
+                <!-- /popup-portfolio-text-price -->
+                <div class="popup-portfolio-text-authors">
+                  <div>
+                    <div class="popup-portfolio-text__title">
+                      Общая стоимость ремонта
+                    </div>
+                    <div class="popup-portfolio-text__value">
+                      386 400 &#8381;
+                    </div>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Прораб: <strong>Петренко А.В.</strong>
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    Руководитель проекта:
+                  </div>
+                  <div class="popup-portfolio-text__title">
+                    <strong>Тюленев Э.Н.</strong>
+                  </div>
                 </div>
-                <div class="popup-portfolio-text__value">386 400 &#8381;</div>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Прораб: <strong>Петренко А.В.</strong>
-              </div>
-              <div class="popup-portfolio-text__title">
-                Руководитель проекта:
-              </div>
-              <div class="popup-portfolio-text__title">
-                <strong>Тюленев Э.Н.</strong>
               </div>
             </div>
           </div>
@@ -3896,9 +4233,9 @@
             ></path>
           </svg>
         </div>
-        <div class="popup-transparency-slider-wrap">
-          <div class="popup-transparency-slider">
-            <div class="popup-transparency-slider__slide">
+        <div class="popup-transparency-slider-wrap" id="transparency-swiper">
+          <div class="popup-transparency-slider swiper-wrapper">
+            <div class="popup-transparency-slider__slide swiper-slide">
               <img
                 class="mobile-hide"
                 src="./images/popup/transparency-slide1.jpg"
@@ -3910,7 +4247,7 @@
                 alt=""
               />
             </div>
-            <div class="popup-transparency-slider__slide">
+            <div class="popup-transparency-slider__slide swiper-slide">
               <img
                 class="mobile-hide"
                 src="./images/popup/transparency-slide2.jpg"
@@ -3922,7 +4259,7 @@
                 alt=""
               />
             </div>
-            <div class="popup-transparency-slider__slide">
+            <div class="popup-transparency-slider__slide swiper-slide">
               <img
                 class="mobile-hide"
                 src="./images/popup/transparency-slide3.jpg"
@@ -3936,16 +4273,11 @@
             </div>
           </div>
           <div
-            class="slider-counter slider-counter_dark"
+            class="slider-counter slider-counter_dark swiper-pagination"
             id="transparency-popup-counter"
-          >
-            <div class="slider-counter-content">
-              <div class="slider-counter-content__current"></div>
-              <div class="slider-counter-content__total"></div>
-            </div>
-          </div>
+          ></div>
           <div
-            class="popup-arrow popup-arrow_transparency popup-arrow_transparency_left"
+            class="popup-arrow popup-arrow_transparency popup-arrow_transparency_left swiper-button-prev"
             id="transparency_left"
           >
             <svg
@@ -3965,7 +4297,7 @@
             </svg>
           </div>
           <div
-            class="popup-arrow popup-arrow_transparency popup-arrow_transparency_right"
+            class="popup-arrow popup-arrow_transparency popup-arrow_transparency_right swiper-button-next"
             id="transparency_right"
           >
             <svg

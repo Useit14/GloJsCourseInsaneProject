@@ -2,7 +2,6 @@ const menu = () => {
   const btnMenu = document.querySelector(".menu__icon");
   const menu = document.querySelector(".popup-dialog-menu");
   const scrollLink = document.querySelector(".button-footer a");
-
   const scroll = (element, event) => {
     if (event.target.matches(".link-list .menu-link")) {
       return;

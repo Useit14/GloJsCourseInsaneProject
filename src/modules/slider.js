@@ -5,12 +5,12 @@ const slider = (
   portfolioBtn,
   arrowLeft,
   arrowRight,
-  indexActiveSlide,
+  indexActiveSlide = 0,
   classCounter = "slider-counter-content__current",
   classCounterTotal = "slider-counter-content__total",
   isWithChangeNode,
   isControl,
-  isAuto = true
+  isAuto
 ) => {
   const sliderBlock = document.querySelector(`.${classSlider}`);
   let slides = document.querySelectorAll(`.${classSlides}`);
@@ -21,7 +21,6 @@ const slider = (
   const popup = document.querySelector(`.popup-portfolio`);
   const closeBtn = popup.querySelector(".close");
   const timeInterval = 2000;
-
   let currentSlide = 0;
   let interval;
   let direction = "right";
@@ -31,7 +30,10 @@ const slider = (
       elems[elems.length - 1].after(elems[0]);
       slides = document.querySelectorAll(`.${classSlides}`);
     } else {
-      elems[index].classList.remove(strClass);
+      elems[index].classList.add(strClass);
+    }
+    if (classCounter) {
+      counter.textContent = index + 1;
     }
   };
 
@@ -87,11 +89,23 @@ const slider = (
   };
 
   const initActiveSlide = (index) => {
+    controlLeft.classList.remove("none");
+    controlRight.classList.remove("none");
     slides.forEach((slide, indexSlide) => {
       slide.classList.add("none");
       if (index === indexSlide) {
         slide.classList.add(classActiveSlides);
-        currentSlide = index;
+        if (initActiveSlide) {
+          currentSlide = index;
+        }
+        if (counter) {
+          counter.textContent = index + 1;
+        }
+        if (currentSlide === 0) {
+          controlLeft.classList.add("none");
+        } else if (currentSlide === slides.length - 1) {
+          controlRight.classList.add("none");
+        }
       }
     });
   };
@@ -102,29 +116,42 @@ const slider = (
       if (!e.target.closest(`.${portfolioBtn}`)) {
         return;
       }
-      !isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
 
       if (e.target.closest(`#${arrowRight}`)) {
+        debugger;
+        currentSlide < slides.length - 1 &&
+          slides[currentSlide].classList.remove(classActiveSlides);
         currentSlide++;
-        isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
+        if (currentSlide === slides.length - 1) {
+          direction = "left";
+          controlRight.classList.add("none");
+          controlLeft.classList.remove("none");
+        } else {
+          controlRight.classList.remove("none");
+          controlLeft.classList.remove("none");
+        }
+        nextSlide(slides, currentSlide, classActiveSlides);
       } else if (e.target.closest(`#${arrowLeft}`)) {
+        currentSlide > 0 &&
+          slides[currentSlide].classList.remove(classActiveSlides);
         currentSlide--;
-        isWithChangeNode && prevSlide(slides, currentSlide, classActiveSlides);
+
+        if (currentSlide === 0) {
+          direction = "left";
+          controlRight.classList.remove("none");
+          controlLeft.classList.add("none");
+        } else {
+          controlRight.classList.remove("none");
+          controlLeft.classList.remove("none");
+        }
+        prevSlide(slides, currentSlide, classActiveSlides);
       }
 
       if (!isWithChangeNode && currentSlide >= slides.length) {
         currentSlide = 0;
-      } else if (currentSlide >= slides.length) {
-        direction = "left";
-        controlLeft.classList.toggle("none");
-        controlRight.classList.toggle("none");
-      } else if (currentSlide <= 0) {
-        direction = "right";
-        controlLeft.classList.toggle("none");
-        controlRight.classList.toggle("none");
+      } else if (!isWithChangeNode && currentSlide < 0) {
+        currentSlide = slides.length - 1;
       }
-
-      !isWithChangeNode && nextSlide(slides, currentSlide, classActiveSlides);
     });
   }
 
@@ -151,9 +178,8 @@ const slider = (
   if (classCounterTotal) {
     counterTotal.textContent = slides.length;
   }
-  if (typeof indexActiveSlide === "number") {
-    initActiveSlide(indexActiveSlide);
-  }
+
+  initActiveSlide(indexActiveSlide);
 
   if (indexActiveSlide) {
     closeBtn.addEventListener("click", () => interval);
