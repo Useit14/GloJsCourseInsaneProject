@@ -9163,6 +9163,14 @@ strong {
     left: 66%;
 }
 
+div.formula-item-popup-bottom {
+    top: 90px;
+}
+
+div.formula-item-popup-bottom::before {
+    transform: rotate(180deg);
+}
+
 @media (max-width:1024px) {
     div#porflotio-text-swiper {
         position: relative !important;
