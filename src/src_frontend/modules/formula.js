@@ -2,19 +2,15 @@ import Swiper, { Navigation, Pagination } from "swiper";
 
 export const formula = () => {
   const swiper = new Swiper("#formula-swiper", {
-    direction: "vertical",
-    slidesPerView: 1,
+    direction: "horizontal",
+    slidesPerView: "auto",
     spaceBetween: 30,
     keyboard: {
       enabled: true,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
     navigation: {
-      nextEl: ".swiper-button-next0",
-      prevEl: ".swiper-button-prev0",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
   });
