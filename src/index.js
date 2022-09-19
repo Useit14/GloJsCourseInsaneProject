@@ -11,6 +11,7 @@ import { UserService } from "./modules/userService";
 import getRepairTypes from "./modules/getRepairTypes";
 import popupTtransparency from "./modules/popupTtransparency";
 import reviews from "./modules/reviews";
+import formula from "./modules/formula";
 
 window.userService = new UserService();
 
@@ -60,3 +61,4 @@ portfolio();
 getRepairTypes();
 repairSlider();
 reviews();
+formula();

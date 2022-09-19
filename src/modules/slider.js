@@ -118,7 +118,6 @@ const slider = (
       }
 
       if (e.target.closest(`#${arrowRight}`)) {
-        debugger;
         currentSlide < slides.length - 1 &&
           slides[currentSlide].classList.remove(classActiveSlides);
         currentSlide++;

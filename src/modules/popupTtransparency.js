@@ -5,14 +5,33 @@ const popupTtransparency = () => {
   const transparencyImages = document.querySelectorAll(
     ".transparency-item__img"
   );
+  let initialIndex;
   const close = popup.querySelector(".close");
+  let swiper;
+  const getIndexActiveSlide = (event) => {
+    const image = event.target.querySelector("img");
+    const index = parseInt(image.alt[image.alt.search(/[0-9]/)]);
+    initialIndex = index - 1;
+  };
+
+  const reset = (id) => {
+    const container = document.querySelector(`#${id}`);
+    const slides = container.querySelectorAll(".swiper-slide");
+    slides.forEach((slide) => {
+      slide.classList.remove("swiper-slide-prev");
+      slide.classList.remove("swiper-slide-active");
+      slide.classList.remove("swiper-slide-next");
+    });
+  };
 
   transparencyImages.forEach((img) => {
-    img.addEventListener("click", () => {
+    img.addEventListener("click", (e) => {
       popup.style.visibility = "visible";
-      const swiper = new Swiper("#transparency-swiper", {
+      getIndexActiveSlide(e);
+      swiper = new Swiper("#transparency-swiper", {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 500,
+        initialSlide: initialIndex,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -27,6 +46,9 @@ const popupTtransparency = () => {
   });
 
   close.addEventListener("click", (e) => {
+    reset("transparency-swiper");
+    reset("transparency-mobile-swiper");
+
     popup.style.visibility = "hidden";
   });
 
@@ -35,6 +57,8 @@ const popupTtransparency = () => {
       const swiper2 = new Swiper("#transparency-mobile-swiper", {
         direction: "horizontal",
         slidesPerView: 1,
+        initialSlide: 0,
+        spaceBetween: 500,
         keyboard: {
           enabled: true,
         },

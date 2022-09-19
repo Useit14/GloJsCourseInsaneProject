@@ -7044,6 +7044,7 @@ div.wave-block:nth-child(17):after {
     -webkit-box-shadow: 0px 3.05528px 15.2764px rgb(50 40 35 / 10%);
     box-shadow: 0px 3.05528px 15.2764px rgb(50 40 35 / 10%);
     background: #ffffff;
+    border-color: transparent;
 }
 
 @media (max-width: 575px) {
@@ -7110,51 +7111,12 @@ div.wave-block:nth-child(17):after {
     fill: #ffffff;
 }
 
-/* .slider-arrow_left {
-    left: -20px;
-} */
-
-/* .slider-arrow_left-portfolio {
-    left: -60px;
-} */
-
-@media (max-width: 1130px) {
-    .slider-arrow_left-portfolio {
-        left: -30px;
-    }
-}
-
-@media (max-width: 1070px) {
-    .slider-arrow_left-portfolio {
-        left: -20px;
-    }
-}
-
 @media (min-width: 1025px) {
     .slider-arrow_left-formula {
         display: none;
     }
 }
 
-/* .slider-arrow_right {
-    right: -20px;
-} */
-
-/* .slider-arrow_right-portfolio {
-    right: -60px;
-} */
-
-@media (max-width: 1130px) {
-    .slider-arrow_right-portfolio {
-        right: -30px;
-    }
-}
-
-@media (max-width: 1070px) {
-    .slider-arrow_right-portfolio {
-        right: -20px;
-    }
-}
 
 @media (min-width: 1025px) {
     .slider-arrow_right-formula {
@@ -7246,7 +7208,7 @@ div.wave-block:nth-child(17):after {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         max-width: 100%;
     }
 }
@@ -7367,6 +7329,56 @@ div.wave-block:nth-child(17):after {
     right: 0;
 }
 
+@media (max-width:1204px) {
+    .nav-arrow_left {
+        left: 30%;
+    }
+
+    .nav-arrow_right {
+        right: 35%;
+    }
+}
+
+@media (max-width:768px) {
+    .nav-arrow_left {
+        left: 30%;
+    }
+
+    .nav-arrow_right {
+        right: 25%;
+    }
+}
+
+@media (max-width:547px) {
+    .nav-arrow_left {
+        left: 0;
+    }
+
+    .nav-arrow_right {
+        right: 12%;
+    }
+}
+
+#reviews-arrow_right {
+    right: 15%;
+    margin-top: 5%;
+}
+
+#reviews-arrow_left {
+    left: 15%;
+    margin-top: 5%;
+}
+
+@media (max-width:856px) {
+    #reviews-arrow_right {
+        margin-top: 0;
+    }
+
+    #reviews-arrow_left {
+        margin-top: 0;
+    }
+}
+
 .nav-arrow:after {
     position: absolute;
     content: '';
@@ -7477,6 +7489,27 @@ div.wave-block:nth-child(17):after {
     background: #F4F4F4;
     -webkit-box-shadow: 0px 0px 10px rgba(50, 40, 35, 0.1);
     box-shadow: 0px 0px 10px rgba(50, 40, 35, 0.1);
+    color: -webkit-gradient(linear, left top, left bottom, from(#F48922), to(#FFB015));
+    color: #F48922;
+}
+
+.slider-counter_dark.slider-counter {
+    color: -webkit-gradient(linear, left top, left bottom, from(#F48922), to(#FFB015));
+    color: #F48922;
+
+}
+
+.slider-counter_dark .swiper-pagination-current {
+    color: white;
+    text-align: left;
+    position: relative;
+    bottom: 5px;
+}
+
+.slider-counter_dark .swiper-pagination-total {
+    color: white;
+    text-align: right;
+    font-weight: 200
 }
 
 .slider-counter-content {
@@ -7493,6 +7526,19 @@ div.wave-block:nth-child(17):after {
     width: 26px;
     height: 38px;
     font-size: 14px;
+}
+
+.swiper-pagination-current {
+    color: black;
+    text-align: left;
+    position: relative;
+    bottom: 2px;
+}
+
+.swiper-pagination-total {
+    color: black;
+    text-align: right;
+    font-weight: 200
 }
 
 .slider-counter-content__current {
@@ -7513,6 +7559,7 @@ div.wave-block:nth-child(17):after {
     background: -webkit-gradient(linear, left top, left bottom, from(#F48922), to(#FFB015));
     background: linear-gradient(#F48922 0%, #FFB015 100%);
 }
+
 
 .slider-counter-content__total {
     text-align: right;
@@ -7548,13 +7595,6 @@ div.wave-block:nth-child(17):after {
     }
 }
 
-@media (max-width: 575px) {
-    .slider-counter-responsive {
-        width: 38px;
-        height: 38px;
-        bottom: -17px;
-    }
-}
 
 @media (max-width: 1024px) {
     .slider-counter-repair {
@@ -8179,101 +8219,7 @@ div.wave-block:nth-child(17):after {
 }
 
 
-#formula-arrow_left {
-    left: -17px;
-}
 
-@media (max-width: 864px) {
-    #formula-arrow_left {
-        top: 42%;
-        left: 25px;
-    }
-}
-
-@media (max-width: 767px) {
-    #formula-arrow_left {
-        left: 50px;
-    }
-}
-
-@media (max-width: 575px) {
-    #formula-arrow_left {
-        left: 65px;
-        top: 50%;
-    }
-}
-
-#formula-arrow_right {
-    right: -24px;
-}
-
-@media (max-width: 864px) {
-    #formula-arrow_right {
-        top: 42%;
-        right: 25px;
-    }
-}
-
-@media (max-width: 767px) {
-    #formula-arrow_right {
-        right: 50px;
-    }
-}
-
-@media (max-width: 575px) {
-    #formula-arrow_right {
-        right: 65px;
-        top: 50%;
-    }
-}
-
-@media (max-width: 575px) {
-
-    #repair-types-arrow_left,
-    #repair-types-arrow_right {
-        top: 41%;
-    }
-}
-
-/* #portfolio-arrow_left {
-    display: none;
-} */
-
-@media (max-width: 900px) {
-    #portfolio-arrow_left {
-        left: -50px;
-    }
-}
-
-@media (max-width: 900px) {
-    #portfolio-arrow_right {
-        right: -50px;
-    }
-}
-
-/* #reviews-arrow_left {
-    top: 75%;
-    left: -80px;
-} */
-
-/* @media (max-width: 575px) {
-    #reviews-arrow_left {
-        top: 117%;
-        left: 55px;
-    }
-} */
-
-/* #reviews-arrow_right {
-    top: 75%;
-    right: -80px;
-} */
-
-/* @media (max-width: 575px) {
-    #reviews-arrow_right {
-        top: 117%;
-        right: 55px;
-    }
-} */
 
 #transparency-arrow_left {
     left: 220px;

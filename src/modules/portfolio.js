@@ -128,7 +128,7 @@ const porfolio = () => {
 
   const swiper5 = new Swiper("#porfolio-swiper-desktop", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 0,
     slidesPerGroup: 3,
     loop: false,
     loopFillGroupWithBlank: true,
