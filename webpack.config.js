@@ -3,9 +3,12 @@ const path = require("path");
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
-  entry: "./index.js",
+  entry: {
+    frontend: "./src_frontend/index.js",
+    backend: "./src_backend/admin.js",
+  },
   output: {
-    filename: "js/main.js",
+    filename: "js/[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
