@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
-const formula = () => {
+export const formula = () => {
   const swiper = new Swiper("#formula-swiper", {
     direction: "vertical",
     slidesPerView: 1,
@@ -19,4 +19,3 @@ const formula = () => {
     modules: [Navigation, Pagination],
   });
 };
-export default formula();

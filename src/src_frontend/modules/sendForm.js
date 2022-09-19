@@ -1,9 +1,9 @@
 /* eslint-disable indent */
 import { validation } from "./validationForm";
 import { animate } from "./helpers";
-import modal from "./modal";
+import { modal } from "./modal";
 
-const sendForm = ({ formId, someElem = [] }) => {
+export const sendForm = ({ formId, someElem = [] }) => {
   const form = document.querySelector(`#${formId}`);
   const btnForm = form.querySelector(".button");
   const statusBlock = document.querySelector(".popup-error__descr");
@@ -71,5 +71,3 @@ const sendForm = ({ formId, someElem = [] }) => {
     console.log(error);
   }
 };
-
-export default sendForm;

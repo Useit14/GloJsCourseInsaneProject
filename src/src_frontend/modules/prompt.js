@@ -1,6 +1,6 @@
-import modal from "./modal";
+import { modal } from "./modal";
 
-const prompt = () => {
+export const prompt = () => {
   const iconPrompt = document.querySelectorAll("#formula .formula-item__icon");
   let indexPopup;
 
@@ -28,5 +28,3 @@ const prompt = () => {
     });
   });
 };
-
-export default prompt;

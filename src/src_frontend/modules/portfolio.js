@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
-const porfolio = () => {
+export const portfolio = () => {
   const popupBtns = document.querySelectorAll(".portfolio-slider__slide");
   const mobilePopupBtns = document.querySelectorAll(
     ".portfolio-slider__slide-frame"
@@ -42,6 +42,7 @@ const porfolio = () => {
       swiper = new Swiper("#porfolio-popup-swiper", {
         direction: "horizontal",
         slidesPerView: 1,
+        spaceBetween: 800,
         initialSlide: initialIndex,
         keyboard: {
           enabled: true,
@@ -173,5 +174,3 @@ const porfolio = () => {
     modules: [Navigation, Pagination],
   });
 };
-
-export default porfolio;

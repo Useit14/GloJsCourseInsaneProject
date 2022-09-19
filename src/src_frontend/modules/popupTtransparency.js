@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
-const popupTtransparency = () => {
+export const popupTtransparency = () => {
   const popup = document.querySelector(".popup-transparency");
   const transparencyImages = document.querySelectorAll(
     ".transparency-item__img"
@@ -30,7 +30,7 @@ const popupTtransparency = () => {
       getIndexActiveSlide(e);
       swiper = new Swiper("#transparency-swiper", {
         slidesPerView: 1,
-        spaceBetween: 500,
+        spaceBetween: 800,
         initialSlide: initialIndex,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -71,5 +71,3 @@ const popupTtransparency = () => {
     }
   });
 };
-
-export default popupTtransparency;

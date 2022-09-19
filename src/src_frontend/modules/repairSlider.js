@@ -1,5 +1,5 @@
 import Swiper, { Navigation, Pagination } from "swiper";
-const repairSlider = () => {
+export const repairSlider = () => {
   const list = document.querySelector(".nav-list-repair");
   const types = document.querySelectorAll(".repair-types-slider .type");
   const btns = list.querySelectorAll("button");
@@ -72,7 +72,8 @@ const repairSlider = () => {
     if (screen.width <= 1024) {
       swiper2 = new Swiper("#repair-nav-swiper", {
         direction: "horizontal",
-        slidesPerView: 1,
+        slidesPerView: "auto",
+        spaceBetween: 30,
         keyboard: {
           enabled: true,
         },
@@ -103,5 +104,3 @@ const repairSlider = () => {
     });
   });
 };
-
-export default repairSlider;

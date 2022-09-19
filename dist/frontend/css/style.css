@@ -1762,17 +1762,6 @@ template,
 
 }
 
-@media (min-width:576px) and (max-width:1024px) {
-    button.button_o.repair-types-nav__item {
-        position: relative;
-    }
-
-    button.button_o.repair-types-nav__item svg {
-        position: absolute;
-        top: 0%;
-        left: 33%;
-    }
-}
 
 @media (max-width: 575px) {
     .repair-types-nav__item:nth-child(2) {
@@ -7329,25 +7318,13 @@ div.wave-block:nth-child(17):after {
     right: 0;
 }
 
-@media (max-width:1204px) {
-    .nav-arrow_left {
-        left: 30%;
-    }
 
-    .nav-arrow_right {
-        right: 35%;
-    }
-}
 
-@media (max-width:768px) {
-    .nav-arrow_left {
-        left: 30%;
-    }
 
-    .nav-arrow_right {
-        right: 25%;
-    }
-}
+
+
+
+
 
 @media (max-width:547px) {
     .nav-arrow_left {
@@ -7360,24 +7337,175 @@ div.wave-block:nth-child(17):after {
 }
 
 #reviews-arrow_right {
-    right: 15%;
-    margin-top: 5%;
+    right: 28%;
+    top: 57%;
 }
 
 #reviews-arrow_left {
-    left: 15%;
-    margin-top: 5%;
+    left: 28%;
+    top: 57%;
 }
 
-@media (max-width:856px) {
+@media (max-width:1350px) {
     #reviews-arrow_right {
-        margin-top: 0;
+        right: 26%;
+        top: 57%;
     }
 
     #reviews-arrow_left {
-        margin-top: 0;
+        left: 26%;
+        top: 57%;
+
     }
 }
+
+@media (max-width:1026px) {
+    #reviews-arrow_right {
+        right: 23%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 23%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:1225px) {
+    #reviews-arrow_right {
+        right: 20%;
+        top: 57%;
+    }
+
+    #reviews-arrow_left {
+        left: 20%;
+        top: 57%;
+
+    }
+}
+
+
+
+@media (max-width:1025px) {
+    #reviews-arrow_right {
+        right: 18%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 20%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:939px) {
+    #reviews-arrow_right {
+        right: 15%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 15%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:841px) {
+    #reviews-arrow_right {
+        right: 12%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 12%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:764px) {
+    #reviews-arrow_right {
+        right: 10%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 10%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:713px) {
+    #reviews-arrow_right {
+        right: 7%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 7%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:671px) {
+    #reviews-arrow_right {
+        right: 3%;
+        top: 61%;
+    }
+
+    #reviews-arrow_left {
+        left: 3%;
+        top: 61%;
+
+    }
+}
+
+@media (max-width:576px) {
+    #reviews-arrow_right {
+        right: 15%;
+        top: 75%;
+    }
+
+    #reviews-arrow_left {
+        left: 15%;
+        top: 75%;
+
+    }
+}
+
+@media (max-width:482px) {
+    #reviews-arrow_right {
+        right: 13%;
+        top: 75%;
+    }
+
+    #reviews-arrow_left {
+        left: 13%;
+        top: 75%;
+
+    }
+}
+
+@media (max-width:482px) {
+    #reviews-arrow_right {
+        right: 3%;
+        top: 75%;
+    }
+
+    #reviews-arrow_left {
+        left: 3%;
+        top: 75%;
+
+    }
+}
+
+
+
 
 .nav-arrow:after {
     position: absolute;
@@ -8057,11 +8185,15 @@ div.wave-block:nth-child(17):after {
 .active svg path {
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    stroke: #F48922;
+    stroke: black
 }
 
 .active:hover svg path {
     stroke: #F48922;
+}
+
+.slider-arrow:hover svg path {
+    stroke: white
 }
 
 .active_menu {
@@ -9027,7 +9159,7 @@ strong {
     position: absolute;
     width: 63%;
     overflow-y: scroll;
-    height: 100%;
+    height: 104%;
     left: 66%;
 }
 

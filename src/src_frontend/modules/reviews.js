@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 
-const reviews = () => {
+export const reviews = () => {
   const swiper = new Swiper("#reviews-swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -9,5 +9,3 @@ const reviews = () => {
     modules: [Navigation],
   });
 };
-
-export default reviews;

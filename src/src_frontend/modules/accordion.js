@@ -1,4 +1,4 @@
-const accordion = (classContainer) => {
+export const accordion = (classContainer) => {
   const container = document.querySelector(`.${classContainer}`);
 
   container.addEventListener("click", (e) => {
@@ -7,5 +7,3 @@ const accordion = (classContainer) => {
     }
   });
 };
-
-export default accordion;

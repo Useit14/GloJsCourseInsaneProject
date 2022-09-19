@@ -1,6 +1,6 @@
 import { animate } from "./helpers";
 
-const dropdown = (
+export const dropdown = (
   hanlerElement,
   targetClass,
   options = { changeLogo: true }
@@ -63,5 +63,3 @@ const dropdown = (
     }
   });
 };
-
-export default dropdown;

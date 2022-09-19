@@ -1,5 +1,5 @@
-import slider from "./slider";
-const modal = (
+import { slider } from "./slider";
+export const modal = (
   popupClass,
   buttonClass,
   {
@@ -75,5 +75,3 @@ const modal = (
     });
   }
 };
-
-export default modal;

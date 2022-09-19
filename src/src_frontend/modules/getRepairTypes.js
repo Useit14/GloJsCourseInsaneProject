@@ -1,4 +1,4 @@
-const getRepairTypes = () => {
+export const getRepairTypes = () => {
   let dataServices;
   const btnTypes = document.querySelectorAll(
     ".nav-list.nav-list-popup-repair .button_o"
@@ -38,7 +38,7 @@ const getRepairTypes = () => {
     });
   };
 
-  window.userService.getData("db/db.json").then((data) => {
+  window.userService.getData("../db/db.json").then((data) => {
     dataServices = data;
     render(filterData(data, "Потолок: Демонтажные работы"));
   });
@@ -49,5 +49,3 @@ const getRepairTypes = () => {
     });
   });
 };
-
-export default getRepairTypes;

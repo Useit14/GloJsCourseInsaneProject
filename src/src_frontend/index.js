@@ -1,17 +1,17 @@
-import dropdown from "./modules/dropdown";
-import menu from "./modules/menu";
-import modal from "./modules/modal";
+import { dropdown } from "./modules/dropdown";
+import { menu } from "./modules/menu";
+import { modal } from "./modules/modal";
 import { validation } from "./modules/validationForm";
-import sendForm from "./modules/sendForm";
-import accordion from "./modules/accordion";
-import repairSlider from "./modules/repairSlider";
-import prompt from "./modules/prompt";
-import portfolio from "./modules/portfolio";
+import { sendForm } from "./modules/sendForm";
+import { accordion } from "./modules/accordion";
+import { repairSlider } from "./modules/repairSlider";
+import { prompt } from "./modules/prompt";
+import { portfolio } from "./modules/portfolio";
 import { UserService } from "./modules/userService";
-import getRepairTypes from "./modules/getRepairTypes";
-import popupTtransparency from "./modules/popupTtransparency";
-import reviews from "./modules/reviews";
-import formula from "./modules/formula";
+import { getRepairTypes } from "./modules/getRepairTypes";
+import { popupTtransparency } from "./modules/popupTtransparency";
+import { reviews } from "./modules/reviews";
+import { formula } from "./modules/formula";
 
 window.userService = new UserService();
 

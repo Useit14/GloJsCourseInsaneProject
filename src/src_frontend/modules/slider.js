@@ -1,4 +1,4 @@
-const slider = (
+export const slider = (
   classSlider,
   classSlides,
   classActiveSlides = "portfolio-item-active",
@@ -187,5 +187,3 @@ const slider = (
   startSlide(timeInterval);
   return interval;
 };
-
-export default slider;

@@ -1,4 +1,4 @@
-const menu = () => {
+export const menu = () => {
   const btnMenu = document.querySelector(".menu__icon");
   const menu = document.querySelector(".popup-dialog-menu");
   const scrollLink = document.querySelector(".button-footer a");
@@ -35,5 +35,3 @@ const menu = () => {
 
   scrollLink.addEventListener("click", (event) => scroll(scrollLink, event));
 };
-
-export default menu;
