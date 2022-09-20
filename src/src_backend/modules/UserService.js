@@ -2,12 +2,16 @@ export class UserService {
   async getData(url, option) {
     return await fetch(
       `${url}${option ? "/" : ""}${option?.id ? option?.id : ""}${
-        option?.filter ? "?" + option?.filter + "=true" : ""
+        option?.filter ? "?" + option?.filter + "=" + option?.filterValue : ""
       }${
         option?.sort
           ? "?_sort=" + option?.sort + "&_order=" + option?.order
           : ""
-      }${option?.search ? "?name_like=" + option?.search : ""}`
+      }${
+        option?.search
+          ? "?" + option?.searchParametr + "+_like=" + option?.search
+          : ""
+      }`
     )
       .then((response) => response.json())
       .catch((e) => console.log(e));
@@ -19,6 +23,8 @@ export class UserService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(option.body),
-    }).then((response) => response.json());
+    })
+      .then((response) => response.json())
+      .catch((e) => console.log(e));
   }
 }

@@ -5,7 +5,12 @@ export const getRepairTypes = () => {
   );
 
   const filterData = (data, type) => {
-    let result = data.filter((typeObj) => typeObj.type === type);
+    const result = [];
+    data.forEach((typeObj) => {
+      if (typeObj.type === type) {
+        result.push(typeObj);
+      }
+    });
     return result;
   };
 
@@ -39,8 +44,9 @@ export const getRepairTypes = () => {
   };
 
   window.userService.getData("../db/db.json").then((data) => {
-    dataServices = data;
-    render(filterData(data, "Потолок: Демонтажные работы"));
+    dataServices = data.items;
+    debugger;
+    render(filterData(data.items, "Потолок: Демонтажные работы"));
   });
 
   btnTypes.forEach((element) => {

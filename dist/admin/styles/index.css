@@ -535,11 +535,11 @@ body {
 
 /*   Модальное окно   */
 
-#modal {
+#modalWindow {
     display: none;
 }
 
-.modal {
+.modalWindow {
     display: flex;
     flex-direction: column;
     position: absolute;

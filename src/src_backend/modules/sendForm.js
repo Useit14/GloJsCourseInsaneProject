@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 import { validation } from "./validationForm";
-import { animate } from "./helpers";
 import modal from "./modal";
 
 const sendForm = ({ formId, someElem = [] }) => {
