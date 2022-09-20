@@ -45,7 +45,6 @@ export const getRepairTypes = () => {
 
   window.userService.getData("../db/db.json").then((data) => {
     dataServices = data.items;
-    debugger;
     render(filterData(data.items, "Потолок: Демонтажные работы"));
   });
 
