@@ -101,8 +101,7 @@ export const getRepairTypes = () => {
     if (screen.width <= 1024) {
       const swiper2 = new Swiper("#repair-swiper", {
         direction: "horizontal",
-        slidesPerView: 1,
-        initialSlide: 0,
+        slidesPerView: "auto",
         keyboard: {
           enabled: true,
         },

@@ -36,10 +36,10 @@ export const change = () => {
               });
               window.userService
                 .sendData("http://localhost:3000/items", {
-                  id: id,
+                  id,
                   method: "DELETE",
                 })
-                .then((data) => {
+                .then(() => {
                   window.userService
                     .sendData("http://localhost:3000/items", {
                       method: "POST",
