@@ -30,7 +30,7 @@ export const addService = () => {
         if (e.target.closest(".cancel-button")) {
           e.preventDefault();
         } else if (e.target.closest(".button__close")) {
-          modal.id = "modal";
+          modal.id = "modalWindow";
         }
       });
     });

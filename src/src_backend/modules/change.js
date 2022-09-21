@@ -51,7 +51,11 @@ export const change = () => {
                 inputCost.value = "";
               } else if (e.target.closest(".button__close")) {
                 modalHeader.textContent = "Добавление новой услуги";
-                modal.id = "modal";
+                inputType.value = "";
+                inputName.value = "";
+                inputUnits.value = "";
+                inputCost.value = "";
+                modal.id = "modalWindow";
               }
             });
           });
