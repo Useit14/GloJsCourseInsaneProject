@@ -11,6 +11,7 @@ export const change = () => {
     const inputUnits = form.querySelector(".input__units");
     const inputCost = form.querySelector(".input__cost");
     const modalHeader = modal.querySelector(".modal__header");
+    let id;
 
     tbody.addEventListener("click", (e) => {
       const tr = e.target.closest("tr");
@@ -24,6 +25,7 @@ export const change = () => {
             inputName.value = service.name;
             inputUnits.value = service.units;
             inputCost.value = service.cost;
+            id = service.id;
 
             form.addEventListener("submit", (e) => {
               e.preventDefault();
@@ -34,12 +36,18 @@ export const change = () => {
               });
               window.userService
                 .sendData("http://localhost:3000/items", {
-                  id: tr.dataset.key,
-                  method: "PATH",
-                  body: formBody,
+                  id: id,
+                  method: "DELETE",
                 })
-                .then(() => {
-                  render();
+                .then((data) => {
+                  window.userService
+                    .sendData("http://localhost:3000/items", {
+                      method: "POST",
+                      body: formBody,
+                    })
+                    .then(() => {
+                      render();
+                    });
                 });
             });
             modal.addEventListener("click", (e) => {

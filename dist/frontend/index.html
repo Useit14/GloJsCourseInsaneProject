@@ -2702,25 +2702,23 @@
             </div>
             <!-- /popup-repair-types-nav__title -->
             <div class="nav-wrap nav-wrap-repair">
-              <nav class="nav-popup nav-popup-repair-types transparancy-cut">
-                <div class="nav-list nav-list-popup-repair">
-                  <button class="button_o popup-repair-types-nav__item">
+              <nav class="nav-popup nav-popup-repair-types transparancy-cut" id="repair-swiper">
+                <div class="nav-list nav-list-popup-repair swiper-wrapper">
+                  <button class="button_o popup-repair-types-nav__item swiper-slide">
                     Потолок: Демонтажные работы
                   </button>
-                  <button class="button_o popup-repair-types-nav__item">
+                  <button class="button_o popup-repair-types-nav__item swiper-slide">
                     Потолок: Монтажные работы
                   </button>
-                  <button class="button_o popup-repair-types-nav__item">
+                  <button class="button_o popup-repair-types-nav__item swiper-slide">
                     Стены: Демонтажные работы
                   </button>
-                  <button class="button_o popup-repair-types-nav__item">
+                  <button class="button_o popup-repair-types-nav__item swiper-slide">
                     Стены: Монтажные работы
                   </button>
                 </div>
-              </nav>
-              <!-- /.repair-types__nav -->
-              <div
-                class="nav-arrow nav-arrow_left desktop-hide"
+                <div
+                class="nav-arrow nav-arrow_left swiper-button-prev desktop-hide"
                 id="nav-arrow-popup-repair_left"
               >
                 <svg
@@ -2739,7 +2737,7 @@
                 </svg>
               </div>
               <div
-                class="nav-arrow nav-arrow_right desktop-hide"
+                class="nav-arrow nav-arrow_right desktop-hide swiper-button-next"
                 id="nav-arrow-popup-repair_right"
               >
                 <svg
@@ -2757,6 +2755,9 @@
                   ></path>
                 </svg>
               </div>
+              </nav>
+              <!-- /.repair-types__nav -->
+
             </div>
             <!-- /.repair-types__nav-wrap -->
           </div>

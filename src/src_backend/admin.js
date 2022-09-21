@@ -15,8 +15,7 @@ if (location.pathname === "/admin/table.html") {
   if (getCookie("isAuth") === "true") {
     render();
   } else {
-    location.pathname !== "/admin" &&
-      location.assign(`${location.origin}/admin`);
+    location.pathname !== "/admin" && location.assign("/admin");
   }
 } else {
   authorization("form-autorization");

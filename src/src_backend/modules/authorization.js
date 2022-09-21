@@ -66,14 +66,14 @@ export const authorization = async (formId) => {
       validationData().then((response) => {
         if (response.isAuth) {
           setCookie(true, 1);
-          location.assign("http://localhost:8081/admin/table.html");
+          location.assign("./table.html");
         }
       });
     });
   }
 
   if (getCookie("isAuth") === "true") {
-    location.assign("http://localhost:8081/admin/table.html");
+    location.assign("./table.html");
     return;
   } else {
     return;

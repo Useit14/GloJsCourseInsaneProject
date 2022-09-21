@@ -1,3 +1,5 @@
+import Swiper, { Navigation, Pagination } from "swiper";
+
 export const getRepairTypes = () => {
   let dataServices;
   const buttonsContainer = document.querySelector(".nav-list-popup-repair");
@@ -93,5 +95,23 @@ export const getRepairTypes = () => {
         render(filterData(dataServices, e.target.outerText));
       });
     });
+  });
+
+  window.addEventListener("resize", () => {
+    if (screen.width <= 1024) {
+      const swiper2 = new Swiper("#repair-swiper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        initialSlide: 0,
+        keyboard: {
+          enabled: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        modules: [Navigation, Pagination],
+      });
+    }
   });
 };
