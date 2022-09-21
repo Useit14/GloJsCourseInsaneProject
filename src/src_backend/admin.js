@@ -16,7 +16,7 @@ if (location.pathname === "/admin/table.html") {
     render();
   } else {
     location.pathname !== "/admin" &&
-      location.assign("http://localhost:8081/admin");
+      location.assign(`${location.origin}/admin`);
   }
 } else {
   authorization("form-autorization");

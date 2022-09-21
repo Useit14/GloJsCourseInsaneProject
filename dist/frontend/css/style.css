@@ -1258,6 +1258,11 @@ template,
     z-index: 0;
 }
 
+
+div.formula-title {
+    z-index: -1;
+}
+
 .formula-item strong {
     font-weight: 500;
 }
@@ -4753,7 +4758,7 @@ div.wave-block:nth-child(17):after {
 
 .popup-dialog {
     position: relative;
-    max-width: 1200px;
+    max-width: 1500px;
     width: 100%;
     height: 624px;
     background: #ffffff;
@@ -4888,7 +4893,7 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 1024px) {
     .popup-dialog-portfolio {
-        height: 857px;
+        height: 1064px;
     }
 }
 
@@ -5975,7 +5980,7 @@ div.wave-block:nth-child(17):after {
 
 .popup-portfolio-slider-wrap {
     position: relative;
-    width: 67%;
+    width: 54%;
     height: 100%;
 }
 
@@ -7732,13 +7737,29 @@ div.wave-block:nth-child(17):after {
 
 .close {
     position: absolute;
-    top: 47px;
+    top: 65px;
     right: 34px;
     font-size: 38px;
     font-weight: 200;
     color: rgba(50, 40, 35, 0.5);
     z-index: 105;
     cursor: pointer;
+}
+
+@media (max-width:1024px) {
+    div.close {
+        top: 0px;
+    }
+
+    div.popup-arrow {
+        top: 65%;
+    }
+}
+
+@media (max-width:575px) {
+    div.popup-arrow {
+        top: 50%;
+    }
 }
 
 .close:after {
@@ -9160,7 +9181,7 @@ strong {
     width: 63%;
     overflow-y: scroll;
     height: 104%;
-    left: 66%;
+    left: 59%;
 }
 
 div.formula-item-popup-bottom {
